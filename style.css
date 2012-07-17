@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #eee;
+  font: 14px/1.5 "Lucida Grande", sans-serif;
+}
+
+a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+header {
+  background: #d3d3d3;
+  border-bottom: 1px solid #aaa;
+  padding: 20px;
+}
+
+header ul.nav {
+  color: #888;
+  font-size: 24px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+header ul.nav li {
+  border-right: 1px solid #aaa;
+  display: inline-block;
+  list-style: none;
+  margin-left: 5px;
+  padding-right: 10px;
+}
+
+header ul.nav li.active {
+  color: #000;
+  font-weight: bold;
+  text-shadow: 0 1px #fff;
+}
+
+header ul.nav li:first-child {
+  margin: 0;
+}
+
+header ul.nav li:last-child {
+  border-right: none;
+  padding: 0;
+}
+
+header #search {
+  -moz-appearance: searchfield;
+  display: inline-block;
+  font-size: 12px;
+  padding: 2px;
+}
+
+header .segmented {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.segmented button {
+  -moz-appearance: none;
+  background: -moz-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
+  border: 1px solid rgb(127, 127, 127);
+  border-radius: 3px;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  color: rgb(72, 72, 72);
+  padding: 4px 8px 2px;
+  text-shadow: 0 1px #fff;
+}
+
+.segmented button:first-child {
+  border-right: none;
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  margin-right: 0;
+}
+
+.segmented button:last-child {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.groups {
+  margin: 30px 0 0 20px;
+}
+
+.group {
+  background: -moz-linear-gradient(#fafafa, #efefef);
+  background: -webkit-linear-gradient(#fafafa, #efefef);
+  border: 1px solid #ccc;
+  border-left: 10px solid #ccc;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  float: left;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  width: 300px;
+  padding: 5px 10px;
+}
+
+.group h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 5px;
+}
+
+ul.bookmarks {
+  margin-left: -5px;
+}
+
+ul.bookmarks li {
+  list-style: none !important;
+  overflow: hidden;
+  padding: 2px 5px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+ul.bookmarks li:hover {
+  background: #ddd;
+  border-radius: 3px;
+}
+
+ul.bookmarks li .url {
+  color: #444;
+  display: none;
+  font-size: 10px;
+  text-overflow: ellipsis;
+}
+
+ul.bookmarks li:hover .url {
+  display: inline;
+}

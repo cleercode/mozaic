@@ -1,0 +1,43 @@
+/*
+* Symbolset
+* www.symbolset.com
+* Copyright © 2012 Oak Studios LLC
+* 
+* Upload this file to your web server
+* and place this within your <head> tags.
+* <link href="path/to/this/file/ss-standard.css" rel="stylesheet" />
+*/
+
+@charset "UTF-8";
+
+@font-face {
+  font-family: "SSStandardRegular";
+  src: url('ss-standard.eot');
+  src: url('ss-standard.eot?#iefix') format('embedded-opentype'),
+       url('ss-standard.woff') format('woff'),
+       url('ss-standard.ttf') format('truetype'),
+       url('ss-standard.svg#SSStandardRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.ss-icon, [class^="ss-"]:before, [class*=" ss-"]:before {
+  font-family: "SSStandardRegular";
+  font-style: normal;
+  font-weight: normal;
+  text-decoration: none;
+  text-rendering: optimizeLegibility;
+  white-space: nowrap;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -moz-font-feature-settings: "liga", "dlig";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+[class^="ss-"]:before, [class*=" ss-"]:before { 
+  display: inline-block;
+}
+
+.ss-cursor:before{content:'\E001'}.ss-crosshair:before{content:'\2316'}.ss-search:before{content:'\D83D\DD0E'}.ss-view:before{content:'\D83D\DC40'}.ss-attach:before{content:'\D83D\DCCE'}.ss-link:before{content:'\D83D\DD17'}.ss-move:before{content:'\E070'}.ss-write:before{content:'\270E'}.ss-writingdisabled:before{content:'\E071'}.ss-erase:before{content:'\2710'}.ss-compose:before{content:'\D83D\DCDD'}.ss-lock:before{content:'\D83D\DD12'}.ss-unlock:before{content:'\D83D\DD13'}.ss-key:before{content:'\D83D\DD11'}.ss-backspace:before{content:'\232B'}.ss-ban:before{content:'\D83D\DEAB'}.ss-trash:before{content:'\E0D0'}.ss-target:before{content:'\25CE'}.ss-tag:before{content:'\E100'}.ss-bookmark:before{content:'\D83D\DD16'}.ss-flag:before{content:'\2691'}.ss-like:before{content:'\D83D\DC4D'}.ss-dislike:before{content:'\D83D\DC4E'}.ss-heart:before{content:'\2665'}.ss-halfheart:before{content:'\E1A0'}.ss-star:before{content:'\22C6'}.ss-halfstar:before{content:'\E1A1'}.ss-sample:before{content:'\E200'}.ss-crop:before{content:'\E201'}.ss-layers:before{content:'\E202'}.ss-phone:before{content:'\D83D\DCDE'}.ss-phonedisabled:before{content:'\E300'}.ss-rss:before{content:'\E310'}.ss-facetime:before{content:'\E320'}.ss-reply:before{content:'\21A9'}.ss-mail:before{content:'\2709'}.ss-inbox:before{content:'\D83D\DCE5'}.ss-chat:before{content:'\D83D\DCAC'}.ss-user:before{content:'\D83D\DC64'}.ss-femaleuser:before{content:'\D83D\DC67'}.ss-cart:before{content:'\E500'}.ss-creditcard:before{content:'\D83D\DCB3'}.ss-barchart:before{content:'\D83D\DCCA'}.ss-piechart:before{content:'\E570'}.ss-box:before{content:'\D83D\DCE6'}.ss-home:before{content:'\2302'}.ss-globe:before{content:'\D83C\DF0E'}.ss-navigate:before{content:'\E670'}.ss-compass:before{content:'\E671'}.ss-signpost:before{content:'\E672'}.ss-location:before{content:'\E6D0'}.ss-pin:before{content:'\D83D\DCCD'}.ss-music:before{content:'\266B'}.ss-mic:before{content:'\D83C\DFA4'}.ss-volume:before{content:'\D83D\DD08'}.ss-volumelow:before{content:'\D83D\DD09'}.ss-volumehigh:before{content:'\D83D\DD0A'}.ss-airplay:before{content:'\E800'}.ss-camera:before{content:'\D83D\DCF7'}.ss-picture:before{content:'\D83C\DF04'}.ss-video:before{content:'\D83D\DCF9'}.ss-play:before{content:'\25B6'}.ss-pause:before{content:'\E8A0'}.ss-stop:before{content:'\25A0'}.ss-record:before{content:'\25CF'}.ss-rewind:before{content:'\23EA'}.ss-fastforward:before{content:'\23E9'}.ss-skipback:before{content:'\23EE'}.ss-skipforward:before{content:'\23ED'}.ss-eject:before{content:'\23CF'}.ss-repeat:before{content:'\D83D\DD01'}.ss-replay:before{content:'\21BA'}.ss-shuffle:before{content:'\D83D\DD00'}.ss-notebook:before{content:'\D83D\DCD3'}.ss-grid:before{content:'\E9A0'}.ss-rows:before{content:'\E9A1'}.ss-desktop:before{content:'\D83D\DCBB'}.ss-laptop:before{content:'\EA00'}.ss-tablet:before{content:'\EA01'}.ss-cell:before{content:'\D83D\DCF1'}.ss-battery:before{content:'\D83D\DD0B'}.ss-batteryhigh:before{content:'\EA10'}.ss-batterymedium:before{content:'\EA11'}.ss-batterylow:before{content:'\EA12'}.ss-batteryempty:before{content:'\EA13'}.ss-clouddownload:before{content:'\EB00'}.ss-download:before{content:'\EB01'}.ss-cloudupload:before{content:'\EB40'}.ss-upload:before{content:'\EB41'}.ss-fork:before{content:'\EB80'}.ss-merge:before{content:'\EB81'}.ss-refresh:before{content:'\21BB'}.ss-sync:before{content:'\EB82'}.ss-loading:before{content:'\EB83'}.ss-wifi:before{content:'\EB84'}.ss-connection:before{content:'\EB85'}.ss-file:before{content:'\D83D\DCC4'}.ss-folder:before{content:'\D83D\DCC1'}.ss-quote:before{content:'\201C'}.ss-text:before{content:'\ED00'}.ss-font:before{content:'\ED01'}.ss-list:before{content:'\ED50'}.ss-layout:before{content:'\EDA0'}.ss-action:before{content:'\EE00'}.ss-expand:before{content:'\2922'}.ss-contract:before{content:'\EE01'}.ss-info:before{content:'\2139'}.ss-alert:before{content:'\26A0'}.ss-caution:before{content:'\26D4'}.ss-plus:before{content:'\002B'}.ss-hyphen:before{content:'\002D'}.ss-dropdown:before{content:'\25BE'}.ss-check:before{content:'\2713'}.ss-delete:before{content:'\2421'}.ss-settings:before{content:'\2699'}.ss-dashboard:before{content:'\F000'}.ss-notifications:before{content:'\D83D\DD14'}.ss-notificationsdisabled:before{content:'\D83D\DD15'}.ss-clock:before{content:'\23F2'}.ss-stopwatch:before{content:'\23F1'}.ss-calendar:before{content:'\D83D\DCC6'}.ss-calendaradd:before{content:'\F070'}.ss-calendarremove:before{content:'\F071'}.ss-calendarcheck:before{content:'\F072'}.ss-briefcase:before{content:'\D83D\DCBC'}.ss-cloud:before{content:'\2601'}.ss-navigateup:before{content:'\F500'}.ss-navigateright:before{content:'\25BB'}.ss-navigatedown:before{content:'\F501'}.ss-navigateleft:before{content:'\25C5'}.ss-up:before{content:'\2B06'}.ss-upright:before{content:'\2B08'}.ss-right:before{content:'\27A1'}.ss-downright:before{content:'\2B0A'}.ss-down:before{content:'\2B07'}.ss-downleft:before{content:'\2B0B'}.ss-left:before{content:'\2B05'}.ss-upleft:before{content:'\2B09'}.ss-retweet:before{content:'\F600'}

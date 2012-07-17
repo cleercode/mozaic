@@ -1,0 +1,1009 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+  <meta charset="UTF-8">
+  <title>Bookmarks</title>
+  <link rel="stylesheet" type="text/css" href="style-list.css" media="all">
+  <link rel="stylesheet" type="text/css" href="webfonts/ss-standard.css" media="all">
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="mousetrap.min.js"></script>
+  <script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+  <div id="content">
+    <header>
+      <ul class="nav">
+        <li class="active">Bookmarks</li>
+        <li>Current Tabs</li>
+        <li>History</li>
+      </ul>
+      <div class="tools">
+        <div class="segmented">
+          <button class="list"><span class="ss-icon">List</span></button><button class="grid"><span class="ss-icon">Grid</span></button>
+        </div>
+        <input type="search" name="search" id="search" placeholder="Search your bookmarks">
+      </div>
+    </header>
+    <div class="groups">
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Mozilla</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://bugzilla.mozilla.org/">
+              <span class="title">Bugzilla</span>
+              <span class="url">https://bugzilla.mozilla.org/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://blog.mozilla.org/ux/">
+              <span class="title">Mozilla UX</span>
+              <span class="url">http://blog.mozilla.org/ux/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://intranet.mozilla.org/Main_Page">
+              <span class="title">Internal Wiki</span>
+              <span class="url">https://intranet.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://wiki.mozilla.org/Main_Page">
+              <span class="title">External Wiki</span>
+              <span class="url">https://wiki.mozilla.org/Main_Page</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://phonebook.mozilla.org/">
+              <span class="title">Phonebook</span>
+              <span class="url">https://phonebook.mozilla.org/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Code</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://dailyjs.com/">
+              <span class="title">DailyJS</span>
+              <span class="url">http://dailyjs.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/">
+              <span class="title">GitHub</span>
+              <span class="url">https://github.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Design</h1>
+        </div>
+         <ul class="bookmarks">
+          <li>
+            <a href="http://dribbble.com/">
+              <span class="title">Dribbble</span>
+              <span class="url">http://dribbble.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>News</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cnn.com/">
+              <span class="title">CNN</span>
+              <span class="url">http://www.cnn.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://news.ycombinator.com/">
+              <span class="title">Hacker News</span>
+              <span class="url">http://news.ycombinator.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Social</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="https://www.facebook.com/">
+              <span class="title">Facebook</span>
+              <span class="url">https://www.facebook.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.twitter.com/">
+              <span class="title">Twitter</span>
+              <span class="url">https://www.twitter.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.quora.com/">
+              <span class="title">Quora</span>
+              <span class="url">http://www.quora.com/</span>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tumblr.com/">
+              <span class="title">Tumblr</span>
+              <span class="url">https://www.tumblr.com/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Reading List</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios">
+              <span class="title">A Primer on Hybrid Apps for iOS - Cocoa Controls</span>
+              <span class="url">http://www.cocoacontrols.com/posts/a-primer-on-hybrid-apps-for-ios</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/">
+              <span class="title">The care and feeding of software engineers (or, why engineers are grumpy) | NCZOnline</span>
+              <span class="url">http://www.nczonline.net/blog/2012/06/12/the-care-and-feeding-of-software-engineers-or-why-engineers-are-grumpy/</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest">
+              <span class="title">A Googler's Recipe for Success - WSJ.com</span>
+              <span class="url">http://online.wsj.com/article/SBB0001424052702303665904577450310579865588.html?mod=WSJ_qthist_wsjlatest</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="group">
+        <div class="name">
+          <h1>Unsorted Bookmarks</h1>
+        </div>
+        <ul class="bookmarks">
+          <li>
+            <a href="http://www.youtube.com/watch?v=CQzUsTFqtW0">
+              <span class="title">Skateboarding Dog - YouTube</span>
+              <span class="url">http://www.youtube.com/watch?v=CQzUsTFqtW0</span>
+            </a>
+          </li>
+          <li>
+            <a href="http://xkcd.com/303/">
+              <span class="title">xkcd: Compiling</span>
+              <span class="url">http://xkcd.com/303/</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
