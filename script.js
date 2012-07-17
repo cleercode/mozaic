@@ -1,7 +1,7 @@
 function siteIcons() {
   var prefix = "http://www.google.com/s2/favicons?domain=";
 
-  $('a').each(function(index, el) {
+  $('.groups a').each(function(index, el) {
     var dest = $(el).attr('href');
     if (dest.match("^https?://")) {
       var domain = dest.split("/");
@@ -92,8 +92,23 @@ function keyboardControl() {
   });
 }
 
+function infoToggle() {
+  var visible = true;
+  $('#info-toggle').click(function() {
+    $(this).toggleClass('toggled');
+    if (visible) {
+      $('.info').addClass('hidden');
+    }
+    else {
+      $('.info').removeClass('hidden');
+    }
+    visible = !visible;
+  });
+}
+
 $(function() {
   siteIcons();
   stickyScroll();
   keyboardControl();
+  infoToggle();
 });
