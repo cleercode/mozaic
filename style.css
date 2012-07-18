@@ -348,7 +348,7 @@ ul.bookmarks li.active .url {
   width: 200px;
 }
 
-.grid ul.bookmarks li a:hover .url {
+.grid ul.bookmarks li:hover .url {
   display: none;
 }
 

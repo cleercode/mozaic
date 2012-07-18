@@ -22,7 +22,7 @@ function stickyScroll() {
     var containerHeight = $container.height();
 
     var padding = 10;
-    var pageOffset = 0;
+    var pageOffset = 57;
 
     $('.groups').scroll(function() {
 
