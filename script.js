@@ -22,11 +22,11 @@ function stickyScroll() {
     var containerHeight = $container.height();
 
     var padding = 10;
-    var pageOffset = 57;
+    var pageOffset = 0;
 
-    $(window).scroll(function() {
+    $('.groups').scroll(function() {
 
-      var top = jQuery(window).scrollTop();
+      var top = $('.groups').scrollTop();
       var position = top + pageOffset + padding;
 
       $el.removeClass();
@@ -58,12 +58,10 @@ function keyboardControl() {
     $active.removeClass('active');
     $next.addClass('active');
 
-    console.log($next.offset().top - $(window).height() - headerHeight);
-
     var nextTop = $next.offset().top;
-    var docBottom = $(window).scrollTop() + $(window).height();
+    var docBottom = $('.groups').scrollTop() + $(window).height();
     if (nextTop > docBottom) {
-      $(window).scrollTop($next.offset().top - $(window).height() + headerHeight);
+      $('.groups').scrollTop($next.offset().top - $(window).height() + headerHeight);
     }
 
     return false;
@@ -78,10 +76,10 @@ function keyboardControl() {
     $next.addClass('active');
 
     var nextTop = $next.offset().top;
-    var docTop = $(window).scrollTop() + headerHeight;
+    var docTop = $('.groups').scrollTop() + headerHeight;
 
     if (nextTop < docTop) {
-      $(window).scrollTop($next.offset().top - headerHeight);
+      $('.groups').scrollTop($next.offset().top - headerHeight);
     }
     return false;
   });
@@ -97,10 +95,10 @@ function infoToggle() {
   $('#info-toggle').click(function() {
     $(this).toggleClass('toggled');
     if (visible) {
-      $('.info').addClass('hidden');
+      $('body').addClass('info-hidden');
     }
     else {
-      $('.info').removeClass('hidden');
+      $('body').removeClass('info-hidden');
     }
     visible = !visible;
   });

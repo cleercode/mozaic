@@ -15,6 +15,7 @@ a {
 
 header {
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   background: #d3d3d3;
   border-bottom: 1px solid #aaa;
   overflow: hidden;
@@ -58,6 +59,7 @@ header .tools {
 
 header #search {
   -moz-appearance: searchfield;
+  -webkit-appearance: searchfield;
   display: inline-block;
   font-size: 12px;
   padding: 2px;
@@ -69,7 +71,9 @@ header .segmented {
 
 header button {
   -moz-appearance: none;
+  -webkit-appearance: none;
   background: -moz-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
+  background: -webkit-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
   border: 1px solid rgb(127, 127, 127);
   border-radius: 3px;
   box-shadow: 0 1px rgba(255, 255, 255, 0.5);
@@ -81,6 +85,7 @@ header button {
 
 header button:active, header button.toggled {
   background: -moz-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
+  background: -webkit-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
 }
 
 header .segmented button:first-child {
@@ -96,13 +101,23 @@ header .segmented button:last-child {
 }
 
 .groups {
-  padding-top: 57px;
-  margin-right: 300px;
-  position: relative;
+  -moz-transition: right 0.5s ease-in;
+  -webkit-transition: right 0.5s ease-in;
+  overflow-y: scroll;
+  position: fixed;
+  top: 57px;
+  bottom: 0;
+  left: 0;
+  right: 322px;
+}
+
+.info-hidden .groups {
+  -moz-transition: right 0.5s ease-out;
+  -webkit-transition: right 0.5s ease-out;
+  right: 0;
 }
 
 .group {
-  /*border-bottom: 1px solid #ccc;*/
   padding-left: 20px;
   position: relative;
   overflow: hidden;
@@ -153,6 +168,7 @@ ul.bookmarks {
   margin-left: 120px;
   padding: 10px 0;
   width: -moz-calc(100% - 121px);
+  width: -webkit-calc(100% - 121px);
 }
 
 ul.bookmarks li {
@@ -210,7 +226,9 @@ ul.bookmarks li.active .url {
 
 .info {
   -moz-transition: right 0.5s ease-in;
+  -webkit-transition: right 0.5s ease-in;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   background: #eee;
   border-left: 1px solid #aaa;
   box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.2);
@@ -223,8 +241,9 @@ ul.bookmarks li.active .url {
   width: 322px;
 }
 
-.info.hidden {
+.info-hidden .info {
   -moz-transition: right 0.5s ease-out;
+  -webkit-transition: right 0.5s ease-out;
   right: -320px;
 }
 
@@ -276,10 +295,12 @@ ul.bookmarks li.active .url {
 
 .info button {
   -moz-appearance: none;
+  -webkit-appearance: none;
   color: #434343;
   border-radius: 4px;
   border: 1px solid #b5b5b5;
   background: -moz-linear-gradient(#fff, #f2f2f2);
+  background: -webkit-linear-gradient(#fff, #f2f2f2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.3);
   padding: 2px 6px;
 }
@@ -318,6 +339,7 @@ ul.bookmarks li.active .url {
 
 .grid ul.bookmarks li a .title {
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   display: block;
   overflow: hidden;
   padding: 0 10px;
