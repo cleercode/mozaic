@@ -98,10 +98,12 @@ function infoToggle() {
 }
 
 function infoShow() {
+  $('#info-toggle').addClass('toggled');
   $('body').addClass('info-visible');
 }
 
 function infoHide() {
+  $('#info-toggle').removeClass('toggled');
   $('body').removeClass('info-visible');
 }
 
