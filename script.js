@@ -13,12 +13,12 @@ function siteIcons() {
 function stickyScroll() {
   $('.group h1').each(function(index, el) {
     var $el = $(el);
-    var elOffset = $el.offset().top;
+    var elOffset = $el.offset().top - $('.groups').scrollTop();
     var elHeight = $el.height();
 
     // Container must have position: relative;
     var $container = $($el.parent());
-    var containerOffset = $container.offset().top;
+    var containerOffset = $container.offset().top; - $('.groups').scrollTop()
     var containerHeight = $container.height();
 
     var padding = 10;
@@ -117,10 +117,23 @@ function viewToggle() {
   });
 }
 
+function hoverInfo() {
+  $('.groups li').hover(function() {
+    var title = $(this).find('.title').text();
+    var url = $(this).find('.url').text();
+    var folder = $(this).parent().parent().find('.name h1').text();
+    var $info = $('.info');
+    $info.find('.title').text(title);
+    $info.find('.url a').attr('href', url).text(url);
+    $info.find('.folder').text(folder);
+  });
+}
+
 $(function() {
   siteIcons();
   stickyScroll();
   keyboardControl();
   infoToggle();
   viewToggle();
+  hoverInfo();
 });
