@@ -108,13 +108,13 @@ header .segmented button:last-child {
   top: 57px;
   bottom: 0;
   left: 0;
-  right: 322px;
+  right: 0;
 }
 
-.info-hidden .groups {
+.info-visible .groups {
   -moz-transition: right 0.5s ease-out;
   -webkit-transition: right 0.5s ease-out;
-  right: 0;
+  right: 322px;
 }
 
 .group {
@@ -173,6 +173,7 @@ ul.bookmarks {
 
 ul.bookmarks li {
   list-style: none !important;
+  position: relative;
 }
 
 ul.bookmarks li a {
@@ -216,6 +217,20 @@ ul.bookmarks li.active .url {
   display: inline;
 }
 
+ul.bookmarks li .edit {
+  display: none;
+}
+
+ul.bookmarks li:hover .edit {
+  color: #444;
+  display: block;
+  position: absolute;
+}
+
+ul.bookmarks li .edit:hover {
+  color: #0073e6;
+}
+
 .group:nth-child(odd) {
   background: #e6e6e6;
 }
@@ -224,7 +239,7 @@ ul.bookmarks li.active .url {
   background: #f7f7f7;
 }
 
-.info {
+#info {
   -moz-transition: right 0.5s ease-in;
   -webkit-transition: right 0.5s ease-in;
   -moz-box-sizing: border-box;
@@ -237,17 +252,17 @@ ul.bookmarks li.active .url {
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
+  right: -320px;
   width: 322px;
 }
 
-.info-hidden .info {
+.info-visible #info {
   -moz-transition: right 0.5s ease-out;
   -webkit-transition: right 0.5s ease-out;
-  right: -320px;
+  right: 0;
 }
 
-.info:before {
+#info:before {
   content: '';
   cursor: ew-resize;
   position: absolute;
@@ -257,16 +272,44 @@ ul.bookmarks li.active .url {
   width: 3px;
 }
 
-.info .thumb {
+#info .thumb {
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-.info .url {
+#info #edit-title {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+#info .url {
   font-size: 14px;
 }
 
-.info strong {
+#info #edit-url {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  font-size: 14px;
+  width: 100%;
+}
+
+#info #edit-title, #info #edit-url {
+  display: none;
+}
+
+#info.editing .title, #info.editing .url {
+  display: none;
+}
+
+#info.editing #edit-title, #info.editing #edit-url {
+  display: block;
+}
+
+#info strong {
   color: #888;
   display: inline-block;
   font-weight: normal;
@@ -274,17 +317,17 @@ ul.bookmarks li.active .url {
   width: 70px;
 }
 
-.info .section {
+#info .section {
   margin-bottom: 20px;
 }
 
-.info .header {
+#info .header {
   border-bottom: 1px solid #ccc;
   margin-bottom: 10px;
   padding-bottom: 10px;
 }
 
-.info .tag {
+#info .tag {
   background: #fafafa;
   border: 1px solid #ccc;
   border-radius: 999px;
@@ -293,7 +336,7 @@ ul.bookmarks li.active .url {
   padding: 2px 8px;
 }
 
-.info button {
+#info .done {
   -moz-appearance: none;
   -webkit-appearance: none;
   color: #434343;
@@ -302,15 +345,25 @@ ul.bookmarks li.active .url {
   background: -moz-linear-gradient(#fff, #f2f2f2);
   background: -webkit-linear-gradient(#fff, #f2f2f2);
   box-shadow: inset 0 1px rgba(255, 255, 255, 0.8), inset 0 0 1px rgba(255, 255, 255, 0.25), 0 1px rgba(255, 255, 255, 0.3);
+  display: none;
   padding: 2px 6px;
 }
 
-.info button:active {
+#info .done:active {
   box-shadow: inset 0 1px 4px -3px #000, 0 1px rgba(255, 255, 255, 0.3);
+}
+
+#info.editing .done {
+  display: block;
 }
 
 .list ul.bookmarks .thumb {
   display: none;
+}
+
+.list ul.bookmarks li:hover .edit {
+  right: 10px;
+  top: 4px;
 }
 
 .grid ul.bookmarks {
@@ -359,4 +412,16 @@ ul.bookmarks li.active .url {
 
 .grid ul.bookmarks li.active a {
   color: #0073e6;
+}
+
+.grid ul.bookmarks li .edit {
+  background: #fafafa;
+  border: 1px solid #888;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  line-height: 1;
+  padding: 6px 4px 2px;
+  text-shadow: 0 1px #fff;
+  right: 5px;
+  top: 5px;
 }

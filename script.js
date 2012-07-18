@@ -91,17 +91,18 @@ function keyboardControl() {
 }
 
 function infoToggle() {
-  var visible = true;
   $('#info-toggle').click(function() {
     $(this).toggleClass('toggled');
-    if (visible) {
-      $('body').addClass('info-hidden');
-    }
-    else {
-      $('body').removeClass('info-hidden');
-    }
-    visible = !visible;
+    $('body').toggleClass('info-visible');
   });
+}
+
+function infoShow() {
+  $('body').addClass('info-visible');
+}
+
+function infoHide() {
+  $('body').removeClass('info-visible');
 }
 
 function viewToggle() {
@@ -119,14 +120,42 @@ function viewToggle() {
 
 function hoverInfo() {
   $('.groups li').hover(function() {
+    var $info = $('#info');
+    if ($info.hasClass('editing')) return;
+
+    var thumb = $(this).find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
     var title = $(this).find('.title').text();
     var url = $(this).find('.url').text();
     var folder = $(this).parent().parent().find('.name h1').text();
-    var $info = $('.info');
+    $info.find('.thumb').attr('src', thumb);
     $info.find('.title').text(title);
     $info.find('.url a').attr('href', url).text(url);
     $info.find('.folder').text(folder);
   });
+}
+
+function editInfo() {
+  $('.edit').click(function(e) {
+    infoShow();
+    var $info = $('#info');
+    var thumb = $(this).find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
+    var title = $(this).parent().find('.title').text();
+    var url = $(this).parent().find('.url').text();
+    var folder = $(this).parent().parent().parent().find('.name h1').text();
+    $info.addClass('editing');
+    $info.find('.thumb').attr('src', thumb);
+    $info.find('.title').text(title);
+    $info.find('.url a').attr('href', url).text(url);
+    $info.find('.folder').text(folder);
+    $info.find('#edit-title').val(title);
+    $info.find('#edit-url').val(url);
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  });
+  $('.done').click(function() {
+    $('#info').removeClass('editing');
+  })
 }
 
 $(function() {
@@ -136,4 +165,5 @@ $(function() {
   infoToggle();
   viewToggle();
   hoverInfo();
+  editInfo();
 });
