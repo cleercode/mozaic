@@ -138,10 +138,10 @@ function editInfo() {
   $('.edit').click(function(e) {
     infoShow();
     var $info = $('#info');
-    var thumb = $(this).find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
+    var thumb = $(this).parent().find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
     var title = $(this).parent().find('.title').text();
     var url = $(this).parent().find('.url').text();
-    var folder = $(this).parent().parent().parent().find('.name h1').text();
+    var folder = $(this).parent().parent().parent().parent().find('.name h1').text();
     $info.addClass('editing');
     $info.find('.thumb').attr('src', thumb);
     $info.find('.title').text(title);
