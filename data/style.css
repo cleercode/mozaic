@@ -177,6 +177,7 @@ ul.bookmarks li {
 }
 
 ul.bookmarks li a {
+  background: url(default-favicon.png) 10px center no-repeat;
   display: block;
   overflow: hidden;
   padding: 2px 5px 2px 35px;

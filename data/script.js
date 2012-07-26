@@ -5,7 +5,7 @@ function siteIcons() {
     var dest = $(el).attr('href');
     if (dest.match("^https?://")) {
       var domain = dest.split("/");
-      $(el).css({ background: "url(" + prefix + domain[2] + ") 10px center no-repeat" });
+      $(el).css({ backgroundImage: "url(" + prefix + domain[2] + ")" });
     }  
   });
 }
