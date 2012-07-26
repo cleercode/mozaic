@@ -7,7 +7,7 @@ self.port.on('folder', function(folder) {
 });
 
 self.port.on('bookmark', function(bookmark) {
-  var html = '<li><a href="' + bookmark.location + '"><img src="thumbs/unsorted/dog.png" alt="" class="thumb" /><span class="title">' + bookmark.title + '</span><span class="url">' + bookmark.location + '</span><span class="edit ss-icon">Pencil</span></a></li>'
+  var html = '<li><a href="' + bookmark.location + '" target="_blank"><img src="thumbs/unsorted/dog.png" alt="" class="thumb" /><span class="title">' + bookmark.title + '</span><span class="url">' + bookmark.location + '</span><span class="edit ss-icon">Pencil</span></a></li>'
   var el = $(html);
   if (bookmark.icon) {
     el.css({ background: "url(" + bookmark.icon + ") 10px center no-repeat" });
