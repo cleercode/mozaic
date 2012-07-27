@@ -176,11 +176,10 @@ ul.bookmarks li {
   position: relative;
 }
 
-ul.bookmarks li a {
-  background: url(default-favicon.png) 10px center no-repeat;
+ul.bookmarks a {
   display: block;
   overflow: hidden;
-  padding: 2px 5px 2px 35px;
+  padding: 2px 5px 2px 10px;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -193,7 +192,7 @@ ul.bookmarks li .title {
   vertical-align: middle;
 }
 
-ul.bookmarks li .url {
+ul.bookmarks .url {
   color: #444;
   display: none;
   font-size: 10px;
@@ -218,7 +217,7 @@ ul.bookmarks li.active .url {
   display: inline;
 }
 
-ul.bookmarks li .edit {
+ul.bookmarks .edit {
   display: none;
 }
 
@@ -228,7 +227,7 @@ ul.bookmarks li:hover .edit {
   position: absolute;
 }
 
-ul.bookmarks li .edit:hover {
+ul.bookmarks .edit:hover {
   color: #0073e6;
 }
 
@@ -360,6 +359,17 @@ ul.bookmarks li .edit:hover {
 
 .list ul.bookmarks .thumb {
   display: none;
+}
+
+.list ul.bookmarks .icon {
+  background: url(default-favicon.png);
+  background-size: 16px 16px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 4px;
+  width: 16px;
+  height: 16px;
 }
 
 .list ul.bookmarks li:hover .edit {
