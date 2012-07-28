@@ -369,6 +369,11 @@ ul.bookmarks .edit:hover {
   display: block;
 }
 
+.list ul.bookmarks a {
+  -moz-box-sizing: border-box;
+  padding-right: 26px;
+}
+
 .list ul.bookmarks .thumb {
   display: none;
 }
@@ -413,7 +418,7 @@ ul.bookmarks .edit:hover {
   padding: 0;
 }
 
-.grid ul.bookmarks li a .title {
+.grid ul.bookmarks li .title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   display: block;
@@ -437,7 +442,7 @@ ul.bookmarks .edit:hover {
   color: #0073e6;
 }
 
-.grid ul.bookmarks li .edit {
+.grid ul.bookmarks .edit {
   background: #fafafa;
   border: 1px solid #888;
   border-radius: 3px;
