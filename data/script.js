@@ -184,5 +184,5 @@ $(function() {
   viewToggle();
   editInfo();
 
-  bindBookmarks();
+  // bindBookmarks();
 });
