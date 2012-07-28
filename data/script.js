@@ -173,7 +173,7 @@ function editInfo() {
 }
 
 function bindBookmarks() {
-  stickyScroll();
+  // stickyScroll();
   keyboardControl();
   hoverInfo();
 }
