@@ -12,6 +12,7 @@ self.port.on('bookmark', function(bookmark) {
   if (bookmark.icon) {
     el.find('.icon').css({ backgroundImage: "url(" + bookmark.icon + ")" });
   }
+  el.data('bookmark', bookmark);
 
   $('#' + bookmark.folder + ' .bookmarks').append(el);
 });
@@ -20,4 +21,8 @@ self.port.on('image', function(url) {
   var html = '<img src="' + url + '" />'
   var el = $(html);
   $('body').append(el);
+});
+
+self.port.on('complete', function() {
+  bindBookmarks();
 });

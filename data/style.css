@@ -166,7 +166,6 @@ ul.bookmarks {
   box-shadow: 1px 0 1px 1px #fff;
   float: left;
   margin-left: 120px;
-  padding: 10px 0;
   width: -moz-calc(100% - 121px);
   width: -webkit-calc(100% - 121px);
 }
@@ -174,6 +173,14 @@ ul.bookmarks {
 ul.bookmarks li {
   list-style: none !important;
   position: relative;
+}
+
+ul.bookmarks li:first-child {
+  margin-top: 10px;
+}
+
+ul.bookmarks li:last-child {
+  margin-bottom: 10px;
 }
 
 ul.bookmarks a {

@@ -79,7 +79,7 @@ function keyboardControl() {
     var docTop = $('.groups').scrollTop() + headerHeight;
 
     if (nextTop < docTop) {
-      $('.groups').scrollTop($next.offset().top - headerHeight);
+      // $('.groups').scrollTop($next.offset().top - headerHeight);
     }
     return false;
   });
@@ -126,13 +126,15 @@ function hoverInfo() {
     if ($info.hasClass('editing')) return;
 
     var thumb = $(this).find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
-    var title = $(this).find('.title').text();
-    var url = $(this).find('.url').text();
+    var bookmark = $(this).data('bookmark');
     var folder = $(this).parent().parent().find('.name h1').text();
     $info.find('.thumb').attr('src', thumb);
-    $info.find('.title').text(title);
-    $info.find('.url a').attr('href', url).text(url);
+    $info.find('.title').text(bookmark.title);
+    $info.find('.url a').attr('href', bookmark.location).text(bookmark.location);
     $info.find('.folder').text(folder);
+    $info.find('.added').text(bookmark.added);
+    $info.find('.visited').text(bookmark.visited);
+    $info.find('.visits').text(bookmark.visits);
   });
 }
 
@@ -160,12 +162,17 @@ function editInfo() {
   })
 }
 
-$(function() {
-  siteIcons();
+function bindBookmarks() {
   stickyScroll();
   keyboardControl();
+  hoverInfo();
+}
+
+$(function() {
+  siteIcons();
   infoToggle();
   viewToggle();
-  hoverInfo();
   editInfo();
+
+  bindBookmarks();
 });
