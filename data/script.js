@@ -178,13 +178,13 @@ function bindBookmarks() {
   // stickyScroll();
   keyboardControl();
   hoverInfo();
+  editInfo();
 }
 
 $(function() {
   siteIcons();
   infoToggle();
   viewToggle();
-  editInfo();
 
   // bindBookmarks();
 });
