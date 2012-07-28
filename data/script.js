@@ -120,6 +120,16 @@ function viewToggle() {
   });
 }
 
+function formatDate(dateString) {
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+  var d = new Date(dateString);
+  var month = months[d.getMonth()];
+  var date = d.getDate();
+  var year = d.getFullYear();
+  if (year < 1970) return 'Never';
+  return month + ' ' + date + ', ' + year;
+}
+
 function hoverInfo() {
   $('.groups li').hover(function() {
     var $info = $('#info');
@@ -132,8 +142,8 @@ function hoverInfo() {
     $info.find('.title').text(bookmark.title);
     $info.find('.url a').attr('href', bookmark.location).text(bookmark.location);
     $info.find('.folder').text(folder);
-    $info.find('.added').text(bookmark.added);
-    $info.find('.visited').text(bookmark.visited);
+    $info.find('.added').text(formatDate(bookmark.added));
+    $info.find('.visited').text(formatDate(bookmark.visited));
     $info.find('.visits').text(bookmark.visits);
   });
 }
