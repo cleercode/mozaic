@@ -91,9 +91,11 @@ function keyboardControl() {
 }
 
 function infoToggle() {
+  var visible = false;
   $('#info-toggle').click(function() {
-    $(this).toggleClass('toggled');
-    $('body').toggleClass('info-visible');
+    if (visible) infoHide();
+    else infoShow();
+    visible = !visible;
   });
 }
 
