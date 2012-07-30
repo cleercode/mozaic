@@ -137,10 +137,9 @@ function hoverInfo() {
     var $info = $('#info');
     if ($info.hasClass('editing')) return;
 
-    var thumb = $(this).find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
     var bookmark = $(this).data('bookmark');
     var folder = $(this).parent().parent().find('.name h1').text();
-    $info.find('.thumb').attr('src', thumb);
+    $info.find('.thumb').attr('src', bookmark.thumb);
     $info.find('.title').text(bookmark.title);
     $info.find('.url a').attr('href', bookmark.location).text(bookmark.location);
     $info.find('.folder').text(folder);

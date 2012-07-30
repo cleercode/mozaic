@@ -282,6 +282,7 @@ ul.bookmarks .edit:hover {
 #info .thumb {
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+  width: 100%;
 }
 
 #info .title {
@@ -369,6 +370,10 @@ ul.bookmarks .edit:hover {
   display: block;
 }
 
+.list ul.bookmarks li {
+  background-image: none !important;
+}
+
 .list ul.bookmarks a {
   -moz-box-sizing: border-box;
   padding-right: 26px;
@@ -399,7 +404,7 @@ ul.bookmarks .edit:hover {
 }
 
 .grid ul.bookmarks li {
-  background: #fafafa;
+  background: #ccc;
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
@@ -416,14 +421,21 @@ ul.bookmarks .edit:hover {
 .grid ul.bookmarks li a {
   color: #444;
   padding: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .grid ul.bookmarks li .title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  background: #fafafa;
+  border-top: 1px solid #aaa;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   display: block;
   overflow: hidden;
-  padding: 0 10px;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 0;
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 200px;
