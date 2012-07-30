@@ -370,12 +370,9 @@ ul.bookmarks .edit:hover {
   display: block;
 }
 
-.list ul.bookmarks li {
-  background-image: none !important;
-}
-
 .list ul.bookmarks a {
   -moz-box-sizing: border-box;
+  background-image: none !important;
   padding-right: 26px;
 }
 
