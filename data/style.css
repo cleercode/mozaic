@@ -340,7 +340,11 @@ ul.bookmarks .edit:hover {
   padding-bottom: 10px;
 }
 
-#info .tag {
+#info ul.tags {
+  display: inline-block;
+}
+
+#info ul.tags li {
   background: #fafafa;
   border: 1px solid #ccc;
   border-radius: 999px;
@@ -401,7 +405,7 @@ ul.bookmarks .edit:hover {
 }
 
 .grid ul.bookmarks li {
-  background: #363636 url(thumb-info.png) center 10px;
+  background: #eaeaea url(thumb.png) center 10px;
   background-size: 200px;
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);

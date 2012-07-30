@@ -146,6 +146,13 @@ function hoverInfo() {
     $info.find('.added').text(formatDate(bookmark.added));
     $info.find('.visited').text(formatDate(bookmark.visited));
     $info.find('.visits').text(bookmark.visits);
+    $info.find('.tags').empty();
+    bookmark.tags.forEach(function(tag) {
+      console.log(tag);
+      var html = '<li>' + tag + '</li>';
+      var el = $(html);
+      el.appendTo($info.find('.tags'));
+    });
   });
 }
 
