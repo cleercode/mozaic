@@ -15,12 +15,6 @@ self.port.on('bookmark', function(bookmark) {
   $('#' + bookmark.folder + ' .bookmarks').append(el);
 });
 
-self.port.on('image', function(url) {
-  var html = '<img src="' + url + '" />'
-  var el = $(html);
-  $('body').append(el);
-});
-
 self.port.on('complete', function() {
   bindBookmarks();
 });
