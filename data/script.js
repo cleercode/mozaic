@@ -182,7 +182,7 @@ function editInfo() {
 
 function bindBookmarks() {
   // stickyScroll();
-  keyboardControl();
+  // keyboardControl();
   hoverInfo();
   editInfo();
 }
