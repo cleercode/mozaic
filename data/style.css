@@ -435,6 +435,7 @@ ul.bookmarks .edit:hover {
   border-top: 1px solid #aaa;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
   display: block;
+  font-size: 12px;
   overflow: hidden;
   padding: 5px 10px;
   position: absolute;
