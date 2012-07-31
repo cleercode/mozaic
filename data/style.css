@@ -405,7 +405,7 @@ ul.bookmarks .edit:hover {
 }
 
 .grid ul.bookmarks li {
-  background: #eaeaea url(thumb.png) center 10px;
+  background: #eaeaea url(default-thumb.png) center 10px;
   background-size: 200px;
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
