@@ -304,6 +304,9 @@ ul.bookmarks .edit:hover {
 
 #info .url {
   font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 #info #edit-url {
