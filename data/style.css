@@ -282,16 +282,6 @@ ul.bookmarks .edit:hover {
   right: 0;
 }
 
-#info:before {
-  content: '';
-  cursor: ew-resize;
-  position: absolute;
-  left: -1px;
-  top: 0;
-  bottom: 0;
-  width: 3px;
-}
-
 #info .thumb {
   border: 1px solid #aaa;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
