@@ -424,14 +424,14 @@ ul.bookmarks .edit:hover {
   height: 200px;
 }
 
-@media only screen and (max-width: 959px) {
+@media only screen and (max-width: 1279px) {
   .grid ul.bookmarks li {
     width: 200px;
     height: 140px;
   }
 }
 
-@media only screen and (max-width: 1281) {
+@media only screen and (max-width: 1601) {
   .info-visible.grid ul.bookmarks li {
     width: 200px;
     height: 140px;
