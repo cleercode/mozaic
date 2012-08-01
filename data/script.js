@@ -177,6 +177,4 @@ function bindBookmarks() {
 $(function() {
   infoToggle();
   viewToggle();
-
-  // bindBookmarks();
 });
