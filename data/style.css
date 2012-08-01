@@ -13,6 +13,8 @@ a {
   text-decoration: none;
 }
 
+/* Header */
+
 header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -99,6 +101,8 @@ header .segmented button:last-child {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
+
+/* Bookmarks */
 
 .groups {
   -moz-transition: right 0.5s ease-in;
@@ -246,6 +250,8 @@ ul.bookmarks .edit:hover {
   background: #f7f7f7;
 }
 
+/* Info Panel */
+
 #info {
   -moz-transition: right 0.5s ease-in;
   -webkit-transition: right 0.5s ease-in;
@@ -374,6 +380,8 @@ ul.bookmarks .edit:hover {
   display: block;
 }
 
+/* List View */
+
 .list ul.bookmarks a {
   -moz-box-sizing: border-box;
   background-image: none !important;
@@ -399,6 +407,8 @@ ul.bookmarks .edit:hover {
   right: 10px;
   top: 4px;
 }
+
+/* Grid View */
 
 .grid ul.bookmarks {
   padding: 15px;
