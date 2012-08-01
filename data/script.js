@@ -132,16 +132,16 @@ function hoverInfo() {
 function editInfo() {
   $('.edit').click(function(e) {
     $('body').addClass('info-visible');
-    var $info = $('#info');
-    var title = $(this).parent().find('.title').text();
-    var url = $(this).parent().find('.url').text();
-    var folder = $(this).parent().parent().parent().parent().find('.name h1').text();
-    $info.addClass('editing');
-    $info.find('.title').text(title);
-    $info.find('.url a').attr('href', url).text(url);
-    $info.find('.folder').text(folder);
-    $info.find('#edit-title').val(title);
-    $info.find('#edit-url').val(url);
+    var infoEl = $('#info');
+    var bookmarkEl = $(this).parent().parent();
+    var bookmark = bookmarkEl.data('bookmark');
+    infoEl.addClass('editing');
+    infoEl.find('.thumb').attr('src', bookmark.thumb);
+    infoEl.find('.title').text(bookmark.title);
+    infoEl.find('.url a').attr('href', bookmark.location).text(bookmark.location);
+    infoEl.find('.folder').text(bookmark.folder);
+    infoEl.find('#edit-title').val(bookmark.title);
+    infoEl.find('#edit-url').val(bookmark.location);
     e.preventDefault();
     e.stopPropagation();
     return false;
