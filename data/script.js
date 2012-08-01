@@ -131,7 +131,6 @@ function hoverInfo() {
 
 function editInfo() {
   $('.edit').click(function(e) {
-    console.log('yo')
     $('body').addClass('info-visible');
     var $info = $('#info');
     var title = $(this).parent().find('.title').text();
@@ -153,7 +152,7 @@ function editInfo() {
 }
 
 function bindBookmarks() {
-  // stickyScroll();
+  stickyScroll();
   // keyboardControl();
   hoverInfo();
   editInfo();
