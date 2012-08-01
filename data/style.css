@@ -18,8 +18,8 @@ a {
 header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: #d3d3d3;
-  border-bottom: 1px solid #aaa;
+  background: -moz-mac-chrome-active linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.57);
   overflow: hidden;
   padding: 10px 20px;
   position: fixed;
