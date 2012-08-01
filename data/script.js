@@ -1,15 +1,3 @@
-function siteIcons() {
-  var prefix = "http://www.google.com/s2/favicons?domain=";
-
-  $('.groups li a').each(function(index, el) {
-    var dest = $(el).attr('href');
-    if (dest.match("^https?://")) {
-      var domain = dest.split("/");
-      $(el).css({ backgroundImage: "url(" + prefix + domain[2] + ")" });
-    }  
-  });
-}
-
 function stickyScroll() {
   $('.group h1').each(function(index, el) {
     var $el = $(el);
@@ -187,7 +175,6 @@ function bindBookmarks() {
 }
 
 $(function() {
-  siteIcons();
   infoToggle();
   viewToggle();
 
