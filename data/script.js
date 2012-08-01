@@ -108,19 +108,19 @@ function formatDate(dateString) {
 
 function hoverInfo() {
   $('.groups li').hover(function() {
-    var $info = $('#info');
-    if ($info.hasClass('editing')) return;
+    var infoEl = $('#info');
+    if (infoEl.hasClass('editing')) return;
 
     var bookmark = $(this).data('bookmark');
     var folder = $(this).parent().parent().find('.name h1').text();
-    $info.find('.thumb').attr('src', bookmark.thumb);
-    $info.find('.title').text(bookmark.title);
-    $info.find('.url a').attr('href', bookmark.location).text(bookmark.location);
-    $info.find('.folder').text(folder);
-    $info.find('.added').text(formatDate(bookmark.added));
-    $info.find('.visited').text(formatDate(bookmark.visited));
-    $info.find('.visits').text(bookmark.visits);
-    $info.find('.tags').empty();
+    infoEl.find('.thumb').attr('src', bookmark.thumb);
+    infoEl.find('.title').text(bookmark.title);
+    infoEl.find('.url a').attr('href', bookmark.location).text(bookmark.location);
+    infoEl.find('.folder').text(folder);
+    infoEl.find('.added').text(formatDate(bookmark.added));
+    infoEl.find('.visited').text(formatDate(bookmark.visited));
+    infoEl.find('.visits').text(bookmark.visits);
+    infoEl.find('.tags').empty();
     bookmark.tags.forEach(function(tag) {
       var html = '<li>' + tag + '</li>';
       var el = $(html);
