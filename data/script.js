@@ -131,14 +131,13 @@ function hoverInfo() {
 
 function editInfo() {
   $('.edit').click(function(e) {
-    infoShow();
+    console.log('yo')
+    $('body').addClass('info-visible');
     var $info = $('#info');
-    var thumb = $(this).parent().find('.thumb').attr('src').replace('thumbs', 'thumbs-large');
     var title = $(this).parent().find('.title').text();
     var url = $(this).parent().find('.url').text();
     var folder = $(this).parent().parent().parent().parent().find('.name h1').text();
     $info.addClass('editing');
-    $info.find('.thumb').attr('src', thumb);
     $info.find('.title').text(title);
     $info.find('.url a').attr('href', url).text(url);
     $info.find('.folder').text(folder);
