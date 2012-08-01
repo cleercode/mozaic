@@ -416,10 +416,13 @@ ul.bookmarks .edit:hover {
 
 .grid ul.bookmarks li {
   background: #eaeaea url(default-thumb.png) center center no-repeat;
+<<<<<<< HEAD
   border: 1px solid #bbb;
+=======
+>>>>>>> Dark styled thumb view
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
-  margin: 15px;
+  margin: 15px 15px 35px;
   width: 300px;
   height: 200px;
 }
@@ -454,16 +457,16 @@ ul.bookmarks .edit:hover {
 .grid ul.bookmarks li .title {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: #fafafa;
-  border-top: 1px solid #bbb;
-  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
+  color: #fff;
   display: block;
   font-size: 12px;
+  font-weight: bold;
   overflow: hidden;
-  padding: 5px 10px;
   position: absolute;
-  bottom: 0;
+  bottom: -25px;
+  text-align: center;
   text-overflow: ellipsis;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
   white-space: nowrap;
   width: 100%;
 }
@@ -487,8 +490,6 @@ ul.bookmarks .edit:hover {
 
 .grid ul.bookmarks .edit {
   background: #fafafa;
-  border: 1px solid #888;
-  border-width: 0 0 1px 1px;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
   line-height: 1;
   padding: 6px 6px 2px;
@@ -529,4 +530,12 @@ ul.bookmarks .edit:hover {
     overflow: hidden;
     padding: 0;
   }
+}
+
+.grid .group:nth-child(odd) ul.bookmarks {
+  background: #333;
+}
+
+.grid .group:nth-child(even) ul.bookmarks {
+  background: #3b3b3b;
 }
