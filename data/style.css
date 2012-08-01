@@ -438,6 +438,13 @@ ul.bookmarks .edit:hover {
   }
 }
 
+@media only screen and (max-width: 1281) {
+  .info-visible.grid ul.bookmarks li {
+    width: 200px;
+    height: 140px;
+  }
+}
+
 .grid ul.bookmarks li:hover {
   border-color: #888;
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
