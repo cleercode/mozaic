@@ -81,31 +81,17 @@ function keyboardControl() {
 function infoToggle() {
   var visible = false;
   $('#info-toggle').click(function() {
-    if (visible) infoHide();
-    else infoShow();
+    if (visible) $('body').removeClass('info-visible');
+    else $('body').addClass('info-visible');
     visible = !visible;
   });
 }
 
-function infoShow() {
-  $('#info-toggle').addClass('toggled');
-  $('body').addClass('info-visible');
-}
-
-function infoHide() {
-  $('#info-toggle').removeClass('toggled');
-  $('body').removeClass('info-visible');
-}
-
 function viewToggle() {
   $('#list').click(function() {
-    $(this).addClass('toggled');
-    $('#grid').removeClass('toggled');
     $('body').removeClass('grid').addClass('list');
   });
   $('#grid').click(function() {
-    $(this).addClass('toggled');
-    $('#list').removeClass('toggled');
     $('body').removeClass('list').addClass('grid');
   });
 }

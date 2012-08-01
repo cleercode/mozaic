@@ -86,7 +86,7 @@ header button {
   text-shadow: 0 1px #fff;
 }
 
-header button:active, header button.toggled {
+header button:active, .grid #grid, .list #list, .info-visible #info-toggle {
   background: -moz-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
   background: -webkit-linear-gradient(top, #a8a8a8, #c6c6c6 15%, #d8d8d8);
 }
