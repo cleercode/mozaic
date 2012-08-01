@@ -416,7 +416,7 @@ ul.bookmarks .edit:hover {
 
 .grid ul.bookmarks li {
   background: #eaeaea url(default-thumb.png) center center no-repeat;
-  border: 1px solid #aaa;
+  border: 1px solid #bbb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
   margin: 15px;
@@ -455,7 +455,7 @@ ul.bookmarks .edit:hover {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   background: #fafafa;
-  border-top: 1px solid #aaa;
+  border-top: 1px solid #bbb;
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.2);
   display: block;
   font-size: 12px;
@@ -466,6 +466,10 @@ ul.bookmarks .edit:hover {
   text-overflow: ellipsis;
   white-space: nowrap;
   width: 100%;
+}
+
+.grid ul.bookmarks li:hover .title {
+  border-color: #888;
 }
 
 .grid ul.bookmarks li:hover .url {
