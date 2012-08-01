@@ -25,6 +25,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
+  min-width: 800px;
   width: 100%;
   z-index: 2;
 }
