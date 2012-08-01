@@ -484,11 +484,11 @@ ul.bookmarks .edit:hover {
 .grid ul.bookmarks .edit {
   background: #fafafa;
   border: 1px solid #888;
-  border-radius: 3px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-width: 0 0 1px 1px;
+  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
   line-height: 1;
-  padding: 6px 4px 2px;
+  padding: 6px 6px 2px;
   text-shadow: 0 1px #fff;
-  right: 5px;
-  top: 5px;
+  right: 0;
+  top: 0;
 }
