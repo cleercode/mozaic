@@ -206,7 +206,7 @@ header .segmented button:last-child {
 ul.bookmarks {
   background: url("chrome://browser/skin/newtab/noise.png") #ededed;
   border-left: 1px solid #ccc;
-  box-shadow: 1px 0 1px 1px #fff;
+  box-shadow: inset 2px 0 2px -2px rgba(0, 0, 0, 0.1), 1px 0 1px 1px #fff;
   float: left;
   margin-left: 120px;
   width: -moz-calc(100% - 121px);
@@ -541,14 +541,14 @@ ul.bookmarks .edit .ui-icon {
   .group h1 {
     border: 1px solid #ccc;
     border-width: 1px 0;
-    box-shadow: inset 0 1px #fff, 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 1px #fff;
     padding: 5px 15px;
     position: static;
     width: auto;
   }
 
   ul.bookmarks {
-    box-shadow: none;
+    box-shadow: inset 0 2px 2px -2px rgba(0, 0, 0, 0.1);
     border: none;
     margin: 0;
     width: 100%;
