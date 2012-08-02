@@ -172,7 +172,7 @@ header .segmented button:last-child {
 }
 
 ul.bookmarks {
-  background: #fff;
+  background: url("chrome://browser/skin/newtab/noise.png") #ededed;
   border-left: 1px solid #ccc;
   box-shadow: 1px 0 1px 1px #fff;
   float: left;
@@ -254,7 +254,7 @@ ul.bookmarks .edit:hover {
 }
 
 .group:nth-child(odd) ul.bookmarks {
-  background: #f7f7f7;
+  background: url("chrome://browser/skin/newtab/noise.png") #e5e5e5;
 }
 
 /* Info Panel */
