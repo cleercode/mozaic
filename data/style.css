@@ -496,3 +496,37 @@ ul.bookmarks .edit:hover {
   right: 0;
   top: 0;
 }
+
+@media only screen and (max-width: 767px) {
+  .group {
+    padding: 0;
+  }
+
+  .group .name {
+    float: none;
+    position: static;
+    width: auto;
+  }
+
+  .group h1 {
+    border: 1px solid #ccc;
+    border-width: 1px 0;
+    box-shadow: inset 0 1px #fff, 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 5px 15px;
+    position: static;
+    width: auto;
+  }
+
+  ul.bookmarks {
+    box-shadow: none;
+    border: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .grid ul.bookmarks {
+    float: none;
+    overflow: hidden;
+    padding: 0;
+  }
+}
