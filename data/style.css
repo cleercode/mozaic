@@ -416,10 +416,6 @@ ul.bookmarks .edit:hover {
 
 .grid ul.bookmarks li {
   background: #eaeaea url(default-thumb.png) center center no-repeat;
-<<<<<<< HEAD
-  border: 1px solid #bbb;
-=======
->>>>>>> Dark styled thumb view
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
   margin: 15px 15px 35px;
@@ -489,8 +485,10 @@ ul.bookmarks .edit:hover {
 }
 
 .grid ul.bookmarks .edit {
-  background: #fafafa;
-  box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
+  background: #eaeaea;
+  border: 3px solid #333;
+  border-width: 0 0 3px 3px;
+  color: #333;
   line-height: 1;
   padding: 6px 6px 2px;
   text-shadow: 0 1px #fff;
