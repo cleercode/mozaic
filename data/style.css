@@ -234,10 +234,6 @@ ul.bookmarks a {
   white-space: nowrap;
 }
 
-ul.bookmarks li:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
 ul.bookmarks li .title {
   vertical-align: middle;
 }
@@ -432,6 +428,10 @@ ul.bookmarks .edit .ui-icon {
   top: 4px;
   width: 16px;
   height: 16px;
+}
+
+.list ul.bookmarks li:hover {
+  background: rgba(255, 255, 255, 0.8);
 }
 
 .list ul.bookmarks li:hover .edit {
