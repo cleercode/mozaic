@@ -13,6 +13,14 @@ a {
   text-decoration: none;
 }
 
+.ui-icon {
+  background: url(icons.png);
+  display: block;
+  text-indent: -9999px;
+  width: 14px;
+  height: 14px;
+}
+
 /* Header */
 
 header {
@@ -82,7 +90,7 @@ header button {
   box-shadow: 0 1px rgba(255, 255, 255, 0.5);
   color: #1c1c1c;
   margin-right: 10px;
-  padding: 2px 6px 0px;
+  padding: 3px 6px;
   text-shadow: 0 1px #fff;
 }
 
@@ -95,6 +103,30 @@ header button:active, .grid #grid, .list #list, .info-visible #info-toggle {
                1px -1px 0 rgba(0, 0, 0, 0.2),
                -1px 1px 0 rgba(0, 0, 0, 0.2),
                1px 1px 0 rgba(0, 0, 0, 0.2);
+}
+
+#list .ui-icon {
+  background-position: 0 0;
+}
+
+.list #list .ui-icon {
+  background-position: 0 -14px;
+}
+
+#grid .ui-icon {
+  background-position: -14px 0;
+}
+
+.grid #grid .ui-icon {
+  background-position: -14px 14px;
+}
+
+#info-toggle .ui-icon {
+  background-position: -28px 0;
+}
+
+.info-visible #info-toggle .ui-icon {
+  background-position: -28px -14px;
 }
 
 header .segmented button:first-child {
@@ -240,14 +272,14 @@ ul.bookmarks .edit {
 }
 
 ul.bookmarks li:hover .edit {
-  color: #444;
   display: block;
   position: absolute;
 }
 
-ul.bookmarks .edit:hover {
-  color: #0073e6;
+ul.bookmarks .edit .ui-icon {
+  background-position: -42px 0;
 }
+
 
 .group:nth-child(odd) {
   background: #f2f2f2;
@@ -489,8 +521,7 @@ ul.bookmarks .edit:hover {
   border: 1px solid #888;
   border-width: 0 0 1px 1px;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.2);
-  line-height: 1;
-  padding: 6px 6px 2px;
+  padding: 4px;
   text-shadow: 0 1px #fff;
   right: 0;
   top: 0;
