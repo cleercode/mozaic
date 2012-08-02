@@ -4,7 +4,7 @@
 }
 
 body {
-  background: #eee;
+  background: #fafafa;
   font: 14px/1.5 "Lucida Grande", sans-serif;
 }
 
@@ -250,7 +250,7 @@ ul.bookmarks .edit:hover {
 }
 
 .group:nth-child(odd) {
-  background: #e6e6e6;
+  background: #f2f2f2;
 }
 
 .group:nth-child(odd) ul.bookmarks {
