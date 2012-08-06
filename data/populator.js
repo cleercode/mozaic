@@ -1,22 +1,22 @@
-self.port.on('folder', function(folder) {
-  var html = '<div class="group" id="' + folder.id + '"><div class="name"><h1>' + folder.title + '</h1></div><ul class="bookmarks"></ul></div>';
+self.port.on('group', function(group) {
+  var html = '<div class="group" id="' + group.id + '"><div class="name"><h1>' + group.title + '</h1></div><ul class="items"></ul></div>';
   var el = $(html);
   $('.groups').append(el);
 });
 
-self.port.on('bookmark', function(bookmark) {
-  var html = '<li><a href="' + bookmark.location + '" target="_blank" style="background-image: url(' + bookmark.thumb + ')"><span class="icon"></span><span class="title">' + bookmark.title + '</span><span class="url">' + bookmark.location + '</span><span class="edit"><span class="ui-icon">Edit</span></span></a></li>'
+self.port.on('item', function(item) {
+  var html = '<li><a href="' + item.location + '" target="_blank" style="background-image: url(' + item.thumb + ')"><span class="icon"></span><span class="title">' + item.title + '</span><span class="url">' + item.location + '</span><span class="edit"><span class="ui-icon">Edit</span></span></a></li>'
   var el = $(html);
-  if (bookmark.icon) {
-    el.find('.icon').css({ backgroundImage: "url(" + bookmark.icon + ")" });
+  if (item.icon) {
+    el.find('.icon').css({ backgroundImage: "url(" + item.icon + ")" });
   }
-  el.data('bookmark', bookmark);
+  el.data('item', item);
 
-  $('#' + bookmark.folder + ' .bookmarks').append(el);
+  $('#' + item.folder + ' .items').append(el);
 });
 
 self.port.on('complete', function() {
-  bindBookmarks();
+  bindItems();
 });
 
 function clearContent() {

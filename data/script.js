@@ -111,20 +111,20 @@ function hoverInfo() {
     var infoEl = $('#info');
     if (infoEl.hasClass('editing')) return;
 
-    var bookmark = $(this).data('bookmark');
+    var item = $(this).data('item');
     var folder = $(this).parent().parent().find('.name h1').text();
-    infoEl.find('.thumb').attr('src', bookmark.thumb);
-    infoEl.find('.title').text(bookmark.title);
-    infoEl.find('.url a').attr('href', bookmark.location).text(bookmark.location);
+    infoEl.find('.thumb').attr('src', item.thumb);
+    infoEl.find('.title').text(item.title);
+    infoEl.find('.url a').attr('href', item.location).text(item.location);
     infoEl.find('.folder').text(folder);
-    infoEl.find('.added').text(formatDate(bookmark.added));
-    infoEl.find('.visited').text(formatDate(bookmark.visited));
-    infoEl.find('.visits').text(bookmark.visits);
+    infoEl.find('.added').text(formatDate(item.added));
+    infoEl.find('.visited').text(formatDate(item.visited));
+    infoEl.find('.visits').text(item.visits);
     infoEl.find('.tags').empty();
-    bookmark.tags.forEach(function(tag) {
+    item.tags.forEach(function(tag) {
       var html = '<li>' + tag + '</li>';
       var el = $(html);
-      el.appendTo($info.find('.tags'));
+      el.appendTo(infoEl.find('.tags'));
     });
   });
 }
@@ -133,15 +133,15 @@ function editInfo() {
   $('.edit').click(function(e) {
     $('body').addClass('info-visible');
     var infoEl = $('#info');
-    var bookmarkEl = $(this).parent().parent();
-    var bookmark = bookmarkEl.data('bookmark');
+    var itemEl = $(this).parent().parent();
+    var item = itemEl.data('item');
     infoEl.addClass('editing');
-    infoEl.find('.thumb').attr('src', bookmark.thumb);
-    infoEl.find('.title').text(bookmark.title);
-    infoEl.find('.url a').attr('href', bookmark.location).text(bookmark.location);
-    infoEl.find('.folder').text(bookmark.folder);
-    infoEl.find('#edit-title').val(bookmark.title);
-    infoEl.find('#edit-url').val(bookmark.location);
+    infoEl.find('.thumb').attr('src', item.thumb);
+    infoEl.find('.title').text(item.title);
+    infoEl.find('.url a').attr('href', item.location).text(item.location);
+    infoEl.find('.folder').text(item.folder);
+    infoEl.find('#edit-title').val(item.title);
+    infoEl.find('#edit-url').val(item.location);
     e.preventDefault();
     e.stopPropagation();
     return false;
@@ -151,7 +151,7 @@ function editInfo() {
   })
 }
 
-function bindBookmarks() {
+function bindItems() {
   // stickyScroll();
   // keyboardControl();
   hoverInfo();
