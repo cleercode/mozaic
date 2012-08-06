@@ -1,8 +1,8 @@
 {
-    "description": "Prototype of a different bookmarks interface.", 
-    "author": "Chris Lee", 
-    "version": "0.1", 
-    "fullName": "Bookmarks Prototype", 
-    "id": "jid1-sxpdFqE1JoTJYA", 
-    "name": "bookmarks"
+    "description": "A different take on Firefox's Places Library", 
+    "author": "Chris Lee",
+    "version": "0.1",
+    "fullName": "Mozaic",
+    "id": "jid1-sxpdFqE1JoTJYA",
+    "name": "mozaic"
 }
