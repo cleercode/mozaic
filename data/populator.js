@@ -27,18 +27,21 @@ function contentToggle() {
   $('#bookmarks').click(function() {
     clearContent();
     $('ul.nav li').removeClass('active');
+    document.title = 'Bookmarks';
     $(this).addClass('active');
     self.port.emit('bookmarks');
   });
   $('#tabs').click(function() {
     clearContent();
     $('ul.nav li').removeClass('active');
+    document.title = 'Current Tabs';
     $(this).addClass('active');
     self.port.emit('tabs');
   });
   $('#history').click(function() {
     clearContent();
     $('ul.nav li').removeClass('active');
+    document.title = 'History';
     $(this).addClass('active');
     self.port.emit('history');
   });
