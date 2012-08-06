@@ -18,3 +18,32 @@ self.port.on('bookmark', function(bookmark) {
 self.port.on('complete', function() {
   bindBookmarks();
 });
+
+function clearContent() {
+  $('.groups').empty();
+}
+
+function contentToggle() {
+  $('#bookmarks').click(function() {
+    clearContent();
+    $('ul.nav li').removeClass('active');
+    $(this).addClass('active');
+    self.port.emit('bookmarks');
+  });
+  $('#tabs').click(function() {
+    clearContent();
+    $('ul.nav li').removeClass('active');
+    $(this).addClass('active');
+    self.port.emit('tabs');
+  });
+  $('#history').click(function() {
+    clearContent();
+    $('ul.nav li').removeClass('active');
+    $(this).addClass('active');
+    self.port.emit('history');
+  });
+}
+
+$(function() {
+  contentToggle();
+});
