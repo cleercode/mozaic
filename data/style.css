@@ -442,16 +442,12 @@ ul.items .edit .ui-icon {
 
 /* Grid View */
 
-.grid ul.items {
-  padding: 15px;
-}
-
 .grid ul.items li {
   background: #eaeaea url(default-thumb.png) center center no-repeat;
   border: 1px solid #bbb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
-  margin: 15px;
+  margin: 15px 0 15px 30px;
   width: 300px;
   height: 200px;
 }
