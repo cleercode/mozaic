@@ -10,7 +10,7 @@ function stickyScroll() {
     var containerHeight = $container.height();
 
     var padding = 10;
-    var pageOffset = 57;
+    var pageOffset = 60;
 
     $('.groups').scroll(function() {
 
@@ -36,7 +36,7 @@ function stickyScroll() {
 
 function keyboardControl() {
   var index = -1;
-  var headerHeight = 57;
+  var headerHeight = 60;
   Mousetrap.bind('down', function() {
     if (!$('ul.bookmarks li')[index + 1]) return;
 
