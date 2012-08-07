@@ -121,11 +121,13 @@ function hoverInfo() {
     infoEl.find('.visited').text(formatDate(item.visited));
     infoEl.find('.visits').text(item.visits);
     infoEl.find('.tags').empty();
-    item.tags.forEach(function(tag) {
-      var html = '<li>' + tag + '</li>';
-      var el = $(html);
-      el.appendTo(infoEl.find('.tags'));
-    });
+    if (item.tags) {
+      item.tags.forEach(function(tag) {
+        var html = '<li>' + tag + '</li>';
+        var el = $(html);
+        el.appendTo(infoEl.find('.tags'));
+      });
+    }
   });
 }
 
