@@ -96,16 +96,6 @@ function viewToggle() {
   });
 }
 
-function formatDate(dateString) {
-  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-  var d = new Date(dateString);
-  var month = months[d.getMonth()];
-  var date = d.getDate();
-  var year = d.getFullYear();
-  if (year < 1970) return 'Never';
-  return month + ' ' + date + ', ' + year;
-}
-
 function hoverInfo() {
   $('.groups li').hover(function() {
     var infoEl = $('#info');
@@ -117,8 +107,8 @@ function hoverInfo() {
     infoEl.find('.title').text(item.title);
     infoEl.find('.url a').attr('href', item.location).text(item.location);
     infoEl.find('.folder').text(folder);
-    infoEl.find('.added').text(formatDate(item.added));
-    infoEl.find('.visited').text(formatDate(item.visited));
+    infoEl.find('.added').text(item.added);
+    infoEl.find('.visited').text(item.visited);
     infoEl.find('.visits').text(item.visits);
     infoEl.find('.tags').empty();
     if (item.tags) {
