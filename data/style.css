@@ -14,7 +14,7 @@ a {
 }
 
 .ui-icon {
-  background: url(icons.png);
+  background: url(img/icons.png);
   display: block;
   text-indent: -9999px;
   width: 14px;
@@ -421,7 +421,7 @@ ul.items .edit .ui-icon {
 }
 
 .list ul.items .icon {
-  background: url(default-favicon.png);
+  background: url(img/default-favicon.png);
   background-size: 16px 16px;
   display: inline-block;
   margin-right: 10px;
@@ -443,7 +443,7 @@ ul.items .edit .ui-icon {
 /* Grid View */
 
 .grid ul.items li {
-  background: #eaeaea url(default-thumb.png) center center no-repeat;
+  background: #eaeaea url(img/default-thumb.png) center center no-repeat;
   border: 1px solid #bbb;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
   float: left;
