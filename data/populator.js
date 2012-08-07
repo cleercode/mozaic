@@ -13,41 +13,8 @@ function renderItem(item) {
   el.data('item', item);
 
   $('#' + item.folder + ' .items').append(el);
-
 }
 
 self.port.on('group', renderGroup);
 self.port.on('item', renderItem);
 self.port.on('complete', bindItems);
-
-function clearContent() {
-  $('.groups').empty();
-}
-
-function contentToggle() {
-  $('#bookmarks').click(function() {
-    clearContent();
-    $('ul.nav li').removeClass('active');
-    document.title = 'Bookmarks';
-    $(this).addClass('active');
-    self.port.emit('bookmarks');
-  });
-  $('#tabs').click(function() {
-    clearContent();
-    $('ul.nav li').removeClass('active');
-    document.title = 'Current Tabs';
-    $(this).addClass('active');
-    self.port.emit('tabs');
-  });
-  $('#history').click(function() {
-    clearContent();
-    $('ul.nav li').removeClass('active');
-    document.title = 'History';
-    $(this).addClass('active');
-    self.port.emit('history');
-  });
-}
-
-$(function() {
-  contentToggle();
-});
