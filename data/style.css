@@ -26,7 +26,6 @@ a {
 header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  background: -moz-mac-chrome-active linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0));
   border-bottom: 1px solid rgba(0, 0, 0, 0.57);
   overflow: hidden;
   padding: 11px 20px 12px;
@@ -70,40 +69,18 @@ header .tools {
 }
 
 header #search {
-  -moz-appearance: searchfield;
-  -webkit-appearance: searchfield;
   display: inline-block;
   font-size: 12px;
   padding: 2px;
 }
 
-header .segmented {
-  display: inline-block;
-}
-
 header button {
   -moz-appearance: none;
-  -webkit-appearance: none;
-  background: -moz-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
-  background: -webkit-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
-  border: 1px solid #7c7c7c;
-  border-radius: 3px;
-  box-shadow: 0 1px rgba(255, 255, 255, 0.5);
-  color: #1c1c1c;
   margin-right: 10px;
-  padding: 3px 6px;
-  text-shadow: 0 1px #fff;
 }
 
-header button:active, .grid #grid, .list #list, .info-visible #info-toggle {
-  background: #818181;
-  border-color: #575757;
-  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6), 0 1px rgba(255, 255, 255, 0.5);
-  color: #f6f6f6;
-  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2),
-               1px -1px 0 rgba(0, 0, 0, 0.2),
-               -1px 1px 0 rgba(0, 0, 0, 0.2),
-               1px 1px 0 rgba(0, 0, 0, 0.2);
+header .segmented {
+  display: inline-block;
 }
 
 #list .ui-icon {
@@ -590,4 +567,55 @@ ul.items .edit .ui-icon {
     overflow: hidden;
     padding: 0;
   }
+}
+
+/* Mac-specific styling */
+.mac header {
+  background: -moz-mac-chrome-active linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0));
+}
+
+.mac header #search {
+  -moz-appearance: searchfield;
+}
+
+.mac header button {
+  background: -moz-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
+  background: -webkit-linear-gradient(rgb(247, 247, 247), rgb(209, 209, 209));
+  border: 1px solid #7c7c7c;
+  border-radius: 3px;
+  box-shadow: 0 1px rgba(255, 255, 255, 0.5);
+  padding: 3px 6px;
+}
+
+.mac header button:active, .mac.grid #grid, .mac.list #list, .mac.info-visible #info-toggle {
+  background: #818181;
+  border-color: #575757;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6), 0 1px rgba(255, 255, 255, 0.5);
+}
+
+/* Windows-specific styling */
+.windows {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.windows header {
+  background: #dbeaf9 -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+}
+
+.windows header #search {
+  -moz-appearance: none;
+  border: 1px solid rgba(0,0,0,.32);
+  border-radius: 2px;
+  font-family: "Segoe UI", sans-serif;
+  padding: 2px 4px;
+  width: 140px;
+}
+
+.windows header #search:-moz-placeholder {
+  font-style: italic;
+}
+
+.windows header button {
+  background: none;
+  border: none;
 }
