@@ -123,6 +123,7 @@ header .segmented button:last-child {
 .groups {
   -moz-transition: right 0.5s ease-in;
   -webkit-transition: right 0.5s ease-in;
+  background: url("chrome://browser/skin/newtab/noise.png") #ededed;
   overflow-y: scroll;
   position: fixed;
   top: 60px;
@@ -138,18 +139,20 @@ header .segmented button:last-child {
 }
 
 .group {
-  padding-left: 20px;
   position: relative;
   overflow: hidden;
 }
 
 .group .name {
+  -moz-box-sizing: border-box;
+  background: #fafafa;
   float: left;
+  padding: 10px 20px;
   position: absolute;
-  top: 10px;
+  top: 0;
   bottom: 0;
   text-shadow: 0 1px #fff;
-  width: 120px;
+  width: 140px;
 }
 
 .group h1.sticky {
@@ -164,10 +167,10 @@ header .segmented button:last-child {
 }
 
 .group h1 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   position: absolute;
-  width: 120px;
+  width: 100px;
 }
 
 .group h1 .note {
@@ -181,13 +184,13 @@ header .segmented button:last-child {
 }
 
 ul.items {
-  background: url("chrome://browser/skin/newtab/noise.png") #ededed;
+  background: rgba(255, 255, 255, 0.2);
   border-left: 1px solid #ccc;
   box-shadow: inset 2px 0 2px -2px rgba(0, 0, 0, 0.1), 1px 0 1px 1px #fff;
   float: left;
-  margin-left: 120px;
-  width: -moz-calc(100% - 121px);
-  width: -webkit-calc(100% - 121px);
+  margin-left: 140px;
+  width: -moz-calc(100% - 141px);
+  width: -webkit-calc(100% - 141px);
 }
 
 ul.items li {
@@ -253,13 +256,12 @@ ul.items .edit .ui-icon {
   background-position: -42px 0;
 }
 
-
 .group:nth-child(odd) {
-  background: #f2f2f2;
+  background: rgba(0, 0, 0, 0.04);
 }
 
-.group:nth-child(odd) ul.items {
-  background: url("chrome://browser/skin/newtab/noise.png") #e5e5e5;
+.group:nth-child(odd) .name {
+  background: #f2f2f2;
 }
 
 /* Info Panel */
@@ -507,6 +509,7 @@ ul.items .edit .ui-icon {
 
   .group .name {
     float: none;
+    padding: 0;
     position: static;
     width: auto;
   }
@@ -541,6 +544,7 @@ ul.items .edit .ui-icon {
 
   .info-visible .group .name {
     float: none;
+    padding: 0;
     position: static;
     width: auto;
   }
