@@ -157,8 +157,8 @@ header .segmented button:last-child {
 
 .group h1.sticky {
   position: fixed;
-  /* 57 = header height; 10 = padding in each heading cell */
-  top: 67px;
+  /* 60 = header height; 10 = padding in each heading cell */
+  top: 70px;
 }
 
 .group h1.bottom {
@@ -256,11 +256,11 @@ ul.items .edit .ui-icon {
   background-position: -42px 0;
 }
 
-.group:nth-child(odd) {
+.group:nth-child(even) {
   background: rgba(0, 0, 0, 0.04);
 }
 
-.group:nth-child(odd) .name {
+.group:nth-child(even) .name {
   background: #f2f2f2;
 }
 
