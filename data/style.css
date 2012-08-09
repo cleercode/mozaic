@@ -26,7 +26,6 @@ a {
 header {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.57);
   overflow: hidden;
   padding: 11px 20px 12px;
   position: fixed;
@@ -38,7 +37,7 @@ header {
 }
 
 header ul.nav {
-  color: #888;
+  color: #6d6d6d;
   float: left;
   font-size: 24px;
   font-weight: normal;
@@ -572,6 +571,7 @@ ul.items .edit .ui-icon {
 /* Mac-specific styling */
 .mac header {
   background: -moz-mac-chrome-active linear-gradient(rgba(255, 255, 255, 0.43), rgba(255, 255, 255, 0));
+  border-bottom: 1px solid rgba(0, 0, 0, 0.57);
 }
 
 .mac header #search {
@@ -600,6 +600,7 @@ ul.items .edit .ui-icon {
 
 .windows header {
   background: #dbeaf9 -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
+  border-bottom: 1px solid ThreeDShadow;
 }
 
 .windows header #search {
