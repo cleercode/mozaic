@@ -1,6 +1,6 @@
-var places = require('places');
-var moment = require('moment.min');
-var {Cu} = require('chrome');
+const places = require('places');
+const moment = require('moment.min');
+const {Cu} = require('chrome');
 Cu.import('resource://gre/modules/Services.jsm', this);
 Cu.import('resource:///modules/PageThumbs.jsm', this);
 

@@ -1,4 +1,4 @@
-var tabs = require('tabs');
+const tabs = require('tabs');
 
 exports.get = function(worker) {
   var group = { title: 'Current Tabs', id: 'current-tabs' };

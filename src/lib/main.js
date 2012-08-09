@@ -1,13 +1,13 @@
-var PageMod = require('page-mod').PageMod;
-var Widget = require('widget').Widget;
-var tabs = require('tabs');
-var addontab = require('addon-page');
-var runtime = require('runtime');
-var data = require('self').data;
+const PageMod = require('page-mod').PageMod;
+const Widget = require('widget').Widget;
+const tabs = require('tabs');
+const addontab = require('addon-page');
+const runtime = require('runtime');
+const data = require('self').data;
 
-var bookmarks = require('bookmarks');
-var currentTabs = require('current-tabs');
-var history = require('history');
+const bookmarks = require('bookmarks');
+const currentTabs = require('current-tabs');
+const history = require('history');
 
 function detectOS() {
   switch (runtime.OS) {
