@@ -5,7 +5,9 @@
 
 body {
   background: #fafafa;
-  font: 14px/1.5 "Lucida Grande", sans-serif;
+  font: message-box;
+  font-size: 14px;
+  line-height: 1.5;
 }
 
 a {
@@ -598,10 +600,6 @@ ul.items .edit .ui-icon {
 }
 
 /* Windows-specific styling */
-.windows {
-  font-family: "Segoe UI", sans-serif;
-}
-
 .windows header {
   background: #dbeaf9 -moz-linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,0));
   border-bottom: 1px solid ThreeDShadow;
