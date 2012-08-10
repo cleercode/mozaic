@@ -26,5 +26,6 @@ exports.get = function(worker) {
         thumb: uri.spec
       });
     });
+    worker.port.emit('complete');
   });
 }
