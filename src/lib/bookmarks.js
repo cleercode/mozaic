@@ -27,7 +27,7 @@ function queryFolder(folder, worker) {
         var bookmark = {
           folder: result.folder,
           location: result.location,
-          title: result.title,
+          title: result.title || result.location,
           tags: result.tags,
           icon: result.icon,
           thumb: uri.spec,

@@ -17,7 +17,7 @@ function queryFolder(folder, worker) {
         var page = {
           folder: folder.id,
           location: result.location,
-          title: result.title,
+          title: result.title || result.location,
           icon: result.icon,
           thumb: uri.spec,
           visited: moment(result.time).calendar(),
