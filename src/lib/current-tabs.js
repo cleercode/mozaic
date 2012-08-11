@@ -8,11 +8,10 @@ exports.get = function(worker) {
   if (!tabViewWindow) return;
   var groups = tabViewWindow.GroupItems.groupItems;
   groups.forEach(function(group) {
-    var title = group.getTitle();
     var pages = group.getChildren();
     var group = {
-      id: title,
-      title: title
+      id: group.id,
+      title: group.getTitle()
     };
     worker.port.emit('group', group);
     pages.forEach(function(page) {
@@ -20,7 +19,7 @@ exports.get = function(worker) {
       var file = PageThumbsStorage.getFileForURL(url);
       var uri = Services.io.newFileURI(file);
       worker.port.emit('item', {
-        group: group.title,
+        group: group.id,
         location: url,
         title: title || url,
         thumb: uri.spec
