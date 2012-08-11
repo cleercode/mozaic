@@ -12,9 +12,9 @@ function queryFolder(folder, worker) {
     },
     onResult: function(result) {
       if (result.type == 'page' && result.location.indexOf('javascript') != 0) {
-        var file = PageThumbsStorage.getFileForURL(result.location);
-        var uri = Services.io.newFileURI(file);
-        var page = {
+        let file = PageThumbsStorage.getFileForURL(result.location);
+        let uri = Services.io.newFileURI(file);
+        let page = {
           group: folder.id,
           location: result.location,
           title: result.title || result.location,
@@ -33,9 +33,9 @@ function queryFolder(folder, worker) {
 }
 
 exports.get = function(worker) {
-  var today = moment().startOf('day').toDate();
-  var yesterday = moment().startOf('day').subtract('days', 1).toDate();
-  var yesterdayEnd = moment().endOf('day').subtract('days', 1).toDate();
+  let today = moment().startOf('day').toDate();
+  let yesterday = moment().startOf('day').subtract('days', 1).toDate();
+  let yesterdayEnd = moment().endOf('day').subtract('days', 1).toDate();
   queryFolder({ id: 'today', title: 'Today', begin: today }, worker);
   queryFolder({ id: 'yesterday', title: 'Yesterday', begin: yesterday, end: yesterdayEnd }, worker);
 }

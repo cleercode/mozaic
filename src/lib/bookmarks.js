@@ -4,7 +4,7 @@ const {Cu} = require('chrome');
 Cu.import('resource://gre/modules/Services.jsm', this);
 Cu.import('resource:///modules/PageThumbs.jsm', this);
 
-var counter = 0;
+let counter = 0;
 
 function queryFolder(folder, worker) {
   counter++;
@@ -15,16 +15,16 @@ function queryFolder(folder, worker) {
     },
     onResult: function(result) {
       if (result.type == 'folder' && !result.location) {
-        var folder = {
+        let folder = {
           id: result._itemId,
           title: result.title
         };
         queryFolder(folder, worker);
       }
       else if (result.type == 'bookmark' && result.location.indexOf('javascript') != 0) {
-        var file = PageThumbsStorage.getFileForURL(result.location);
-        var uri = Services.io.newFileURI(file);
-        var bookmark = {
+        let file = PageThumbsStorage.getFileForURL(result.location);
+        let uri = Services.io.newFileURI(file);
+        let bookmark = {
           group: result.folder,
           location: result.location,
           title: result.title || result.location,
