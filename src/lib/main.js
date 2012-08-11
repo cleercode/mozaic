@@ -37,7 +37,7 @@ exports.main = function() {
   var pageMod = PageMod({
     include: [url],
     contentScriptWhen: 'end',
-    contentScriptFile: [data.url('jquery-1.7.2.min.js'),
+    contentScriptFile: [data.url('jquery.min.js'),
                         data.url('mousetrap.min.js'),
                         data.url('stylist.js'),
                         data.url('script.js'),
