@@ -1,5 +1,5 @@
 # Mozaic
-Functional prototype for a different take on Firefox's Places (bookmarks and history) browsing features, implemented as a Firefox add-on. Also displays current tabs, like Firefox's Panorama feature.
+Functional prototype for a different take on Firefox's Places (bookmarks and history) browsing features, implemented as a Firefox add-on. Also displays [tab groups](http://support.mozilla.org/en-US/kb/tab-groups-organize-tabs), like Firefox's Panorama feature.
 
 The philosophy behind Mozaic is to decouple content and view. There are three types of content: bookmarks, current tabs, and history, which could possible be extended (perhaps as modules) in the future. There are two types of views: list and thumbnail grid. Each type of content is viewable with each type of view.
 
