@@ -15,7 +15,7 @@ function queryFolder(folder, worker) {
         var file = PageThumbsStorage.getFileForURL(result.location);
         var uri = Services.io.newFileURI(file);
         var page = {
-          folder: folder.id,
+          group: folder.id,
           location: result.location,
           title: result.title || result.location,
           icon: result.icon,

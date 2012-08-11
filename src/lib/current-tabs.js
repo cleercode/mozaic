@@ -20,7 +20,7 @@ exports.get = function(worker) {
       var file = PageThumbsStorage.getFileForURL(url);
       var uri = Services.io.newFileURI(file);
       worker.port.emit('item', {
-        folder: group.title,
+        group: group.title,
         location: url,
         title: title || url,
         thumb: uri.spec

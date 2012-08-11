@@ -25,7 +25,7 @@ function queryFolder(folder, worker) {
         var file = PageThumbsStorage.getFileForURL(result.location);
         var uri = Services.io.newFileURI(file);
         var bookmark = {
-          folder: result.folder,
+          group: result.folder,
           location: result.location,
           title: result.title || result.location,
           tags: result.tags,

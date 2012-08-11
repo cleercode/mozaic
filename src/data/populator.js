@@ -12,7 +12,7 @@ function renderItem(item) {
   }
   el.data('item', item);
 
-  $('#' + item.folder + ' .items').append(el);
+  $('#' + item.group + ' .items').append(el);
 }
 
 self.port.on('group', renderGroup);
