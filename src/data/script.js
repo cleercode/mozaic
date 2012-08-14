@@ -37,45 +37,57 @@ function stickyScroll() {
 function keyboardControl() {
   var index = -1;
   var headerHeight = 60;
-  Mousetrap.bind('down', function() {
-    if (!$('ul.bookmarks li')[index + 1]) return;
-
-    var $active = $('ul.bookmarks li.active');
-    var $next = $($('ul.bookmarks li')[++index]);
-
-    $active.removeClass('active');
-    $next.addClass('active');
-
-    var nextTop = $next.offset().top;
-    var docBottom = $('.groups').scrollTop() + $(window).height();
-    if (nextTop > docBottom) {
-      $('.groups').scrollTop($next.offset().top - $(window).height() + headerHeight);
+  $(document).keydown(function(e) {
+    var keys = { up: 38, down: 40, enter: 13 };
+    switch (e.which) {
+      case keys.up:    up();    break;
+      case keys.down:  down();  break;
+      case keys.enter: enter(); break;
     }
-
-    return false;
   });
-  Mousetrap.bind('up', function() {
-    if (!$('ul.bookmarks li')[index - 1]) return;
 
-    var $active = $('ul.bookmarks li.active');
-    var $next = $($('ul.bookmarks li')[--index]);
+  function up() {
+    if (!$('ul.items li')[index - 1]) return;
 
-    $active.removeClass('active');
-    $next.addClass('active');
+    var active = $('ul.items li.active');
+    var next = $($('ul.items li')[--index]);
 
-    var nextTop = $next.offset().top;
+    active.removeClass('active');
+    next.addClass('active');
+
+    var nextTop = next.offset().top;
     var docTop = $('.groups').scrollTop() + headerHeight;
 
     if (nextTop < docTop) {
-      // $('.groups').scrollTop($next.offset().top - headerHeight);
+      $('.groups').scrollTop(next.offset().top - headerHeight);
     }
+
     return false;
-  });
-  Mousetrap.bind('enter', function() {
-    var $active = $('ul.bookmarks li.active');
-    var link = $active.find('a').attr('href');
+  };
+
+  function down() {
+    if (!$('ul.items li')[index + 1]) return;
+
+    var active = $('ul.items li.active');
+    var next = $($('ul.items li')[++index]);
+
+    active.removeClass('active');
+    next.addClass('active');
+
+    var nextTop = next.offset().top;
+    var docBottom = $('.groups').scrollTop() + $(window).height();
+    if (nextTop > docBottom) {
+      $('.groups').scrollTop(next.offset().top - $(window).height() + headerHeight);
+    }
+
+    return false;
+  };
+
+  function enter() {
+    var active = $('ul.items li.active');
+    var link = active.find('a').attr('href');
     window.open(link);
-  });
+  };
 }
 
 function infoToggle() {
@@ -173,7 +185,7 @@ function contentToggle() {
 
 function bindItems() {
   // stickyScroll();
-  // keyboardControl();
+  keyboardControl();
   hoverInfo();
   editInfo();
 }

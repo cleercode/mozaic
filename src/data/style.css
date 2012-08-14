@@ -232,19 +232,6 @@ ul.items li:hover .url {
   display: inline;
 }
 
-ul.items li.active {
-  background: #0073e6;
-}
-
-ul.items li.active a {
-  color: #fff;
-}
-
-ul.items li.active .url {
-  color: #fff;
-  display: inline;
-}
-
 ul.items .edit {
   display: none;
 }
@@ -409,6 +396,19 @@ ul.items .edit .ui-icon {
   top: 4px;
   width: 16px;
   height: 16px;
+}
+
+.list ul.items li.active {
+  background: #0073e6;
+}
+
+.list ul.items li.active a {
+  color: #fff;
+}
+
+.list ul.items li.active .url {
+  color: #fff;
+  display: inline;
 }
 
 .list ul.items li:hover {

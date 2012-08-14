@@ -38,7 +38,6 @@ exports.main = function() {
     include: [url],
     contentScriptWhen: 'end',
     contentScriptFile: [data.url('jquery.min.js'),
-                        data.url('mousetrap.min.js'),
                         data.url('stylist.js'),
                         data.url('script.js'),
                         data.url('populator.js')],
