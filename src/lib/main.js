@@ -62,12 +62,12 @@ exports.main = function(options) {
     onCommand: open
   });
 
-  if (options.loadReason == 'install') {
+  // if (options.loadReason == 'install') {
     tbb.moveTo({
       toolbarID: 'nav-bar',
       forceMove: true
     });
-  }
+  // }
 
   MenuItem({
     id: 'mozaic-tabs',
