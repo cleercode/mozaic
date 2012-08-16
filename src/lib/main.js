@@ -19,18 +19,19 @@ function detectOS() {
 
 exports.main = function() {
   let url = data.url('index.html');
-  
+
   Widget({
     id: 'mozaic',
     label: 'Mozaic',
     contentURL: data.url('img/icon.png'),
     onClick: function(event) {
-      if (tabs.activeTab.url == url) {
-        tabs.activeTab.close();
+      for each (let tab in tabs) {
+        if (tab.url == url) {
+          tab.activate();
+          return;
+        }
       }
-      else {
-        tabs.open(url);
-      }
+      tabs.open(url);
     }
   });
   
