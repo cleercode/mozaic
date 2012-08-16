@@ -6,6 +6,7 @@ Cu.import('resource:///modules/PageThumbs.jsm', this);
 
 function queryFolder(folder, worker) {
   worker.port.emit('group', folder);
+  let pages = [];
   places.history.search({
     visited: {
       begin: folder.begin
@@ -21,12 +22,21 @@ function queryFolder(folder, worker) {
           icon: result.icon,
           thumb: uri.spec,
           visited: moment(result.time).calendar(),
+          visitedDate: result.time,
           visits: result.accessCount
         };
-        worker.port.emit('item', page);
+        pages.push(page);
       }
     },
     onComplete: function() {
+      pages.sort(function(a, b) {
+        var aDate = new Date(a.visitedDate);
+        var bDate = new Date(b.visitedDate);
+        return (bDate.getTime() - aDate.getTime());
+      });
+      pages.forEach(function(page) {
+        worker.port.emit('item', page);
+      });
       worker.port.emit('complete');
     }
   });

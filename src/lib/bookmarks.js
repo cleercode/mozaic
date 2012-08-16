@@ -9,6 +9,7 @@ let counter = 0;
 function queryFolder(folder, worker) {
   counter++;
   worker.port.emit('group', folder);
+  let bookmarks = [];
   places.bookmarks.search({
     bookmarked: {
       folder: folder.id
@@ -35,10 +36,14 @@ function queryFolder(folder, worker) {
           visited: moment(result.time).calendar(),
           visits: result.accessCount
         };
-        worker.port.emit('item', bookmark);
+        bookmarks[result.position] = bookmark;
       }
     },
     onComplete: function() {
+      bookmarks.forEach(function(bookmark) {
+        worker.port.emit('item', bookmark);
+      });
+      // Check if done with all bookmarks
       counter--;
       if (counter == 0) {
         worker.port.emit('complete');
