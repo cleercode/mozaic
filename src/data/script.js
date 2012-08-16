@@ -170,7 +170,7 @@ function contentToggle() {
   $('#tabs').click(function() {
     clearContent();
     $('ul.nav li').removeClass('active');
-    document.title = 'Current Tabs';
+    document.title = 'Tabs';
     $(this).addClass('active');
     self.port.emit('tabs');
   });
