@@ -1,6 +1,7 @@
 const PageMod = require('page-mod').PageMod;
 const Widget = require('widget').Widget;
 const ToolbarButton = require('toolbarbutton').ToolbarButton;
+const MenuItem = require('menuitems').Menuitem;
 const tabs = require('tabs');
 const addontab = require('addon-page');
 const runtime = require('runtime');
@@ -10,6 +11,8 @@ const bookmarks = require('bookmarks');
 const currentTabs = require('current-tabs');
 const history = require('history');
 
+let url = data.url('index.html');
+
 function detectOS() {
   switch (runtime.OS) {
     case 'WINNT':  return 'windows';
@@ -18,22 +21,23 @@ function detectOS() {
   }
 }
 
+function open() {
+  for each (let tab in tabs) {
+    if (tab.url == url) {
+      tab.activate();
+      return;
+    }
+  }
+  tabs.open(url);
+}
+
 exports.main = function(options) {
-  let url = data.url('index.html');
 
   let tbb = ToolbarButton({
     id: 'mozaic',
     label: 'Mozaic',
     image: data.url('img/icon.png'),
-    onCommand: function(event) {
-      for each (let tab in tabs) {
-        if (tab.url == url) {
-          tab.activate();
-          return;
-        }
-      }
-      tabs.open(url);
-    }
+    onCommand: open
   });
 
   if (options.loadReason == 'install') {
@@ -42,8 +46,24 @@ exports.main = function(options) {
       forceMove: true
     });
   }
+
+  MenuItem({
+    id: 'mozaic-bookmarks',
+    menuid: 'bookmarksMenuPopup',
+    label: 'Show All Bookmarks (Mozaic)',
+    insertbefore: 'organizeBookmarksSeparator',
+    onCommand: open
+  });
+
+  MenuItem({
+    id: 'mozaic-history',
+    menuid: 'goPopup',
+    label: 'Show All History (Mozaic)',
+    insertbefore: 'showAllHistorySeparator',
+    onCommand: open
+  });
   
-  let pm = PageMod({
+  PageMod({
     include: url,
     contentScriptWhen: 'end',
     contentScriptFile: [data.url('jquery.min.js'),

@@ -1,5 +1,5 @@
 {
-    "dependencies": ["addon-kit", "api-utils", "toolbarbutton", "vold-utils"],
+    "dependencies": ["addon-kit", "api-utils", "menuitems", "toolbarbutton", "vold-utils"],
     "description": "A different take on Firefox's Places Library", 
     "author": "Chris Lee",
     "version": "0.3",
