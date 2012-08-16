@@ -1,5 +1,6 @@
 const PageMod = require('page-mod').PageMod;
 const Widget = require('widget').Widget;
+const ToolbarButton = require('toolbarbutton').ToolbarButton;
 const tabs = require('tabs');
 const addontab = require('addon-page');
 const runtime = require('runtime');
@@ -17,14 +18,14 @@ function detectOS() {
   }
 }
 
-exports.main = function() {
+exports.main = function(options) {
   let url = data.url('index.html');
 
-  Widget({
+  let tbb = ToolbarButton({
     id: 'mozaic',
     label: 'Mozaic',
-    contentURL: data.url('img/icon.png'),
-    onClick: function(event) {
+    image: data.url('img/icon.png'),
+    onCommand: function(event) {
       for each (let tab in tabs) {
         if (tab.url == url) {
           tab.activate();
@@ -34,9 +35,16 @@ exports.main = function() {
       tabs.open(url);
     }
   });
+
+  if (options.loadReason == "install") {
+    tbb.moveTo({
+      toolbarID: "nav-bar",
+      forceMove: true
+    });
+  }
   
-  PageMod({
-    include: [url],
+  let pm = PageMod({
+    include: url,
     contentScriptWhen: 'end',
     contentScriptFile: [data.url('jquery.min.js'),
                         data.url('stylist.js'),
