@@ -3,7 +3,7 @@ const Widget = require('widget').Widget;
 const ToolbarButton = require('toolbarbutton').ToolbarButton;
 const MenuItem = require('menuitems').Menuitem;
 const tabs = require('tabs');
-const addontab = require('addon-page');
+// const addontab = require('addon-page');
 const runtime = require('runtime');
 const data = require('self').data;
 
@@ -21,14 +21,36 @@ function detectOS() {
   }
 }
 
-function open() {
+function open(content) {
   for each (let tab in tabs) {
     if (tab.url == url) {
       tab.activate();
       return;
     }
   }
-  tabs.open(url);
+  tabs.open({
+    url: url,
+    onReady: function(tab) {
+      var worker = tab.attach({
+        contentScriptFile: [data.url('jquery.min.js'),
+                            data.url('stylist.js'),
+                            data.url('script.js'),
+                            data.url('populator.js')],
+      });
+      worker.port.emit('os', detectOS());
+
+      bookmarks.get(worker);
+      worker.port.on('bookmarks', function() {
+        bookmarks.get(worker);
+      });
+      worker.port.on('tabs', function() {
+        currentTabs.get(worker);
+      });
+      worker.port.on('history', function() {
+        history.get(worker);
+      });
+    }
+  });
 }
 
 exports.main = function(options) {
@@ -69,28 +91,5 @@ exports.main = function(options) {
     label: 'Show All Bookmarks (Mozaic)',
     insertbefore: 'organizeBookmarksSeparator',
     onCommand: open
-  });
-  
-  PageMod({
-    include: url,
-    contentScriptWhen: 'end',
-    contentScriptFile: [data.url('jquery.min.js'),
-                        data.url('stylist.js'),
-                        data.url('script.js'),
-                        data.url('populator.js')],
-    onAttach: function(worker) {
-      worker.port.emit('os', detectOS());
-
-      bookmarks.get(worker);
-      worker.port.on('bookmarks', function() {
-        bookmarks.get(worker);
-      });
-      worker.port.on('tabs', function() {
-        currentTabs.get(worker);
-      });
-      worker.port.on('history', function() {
-        history.get(worker);
-      });
-    }
   });
 };
