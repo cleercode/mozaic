@@ -18,9 +18,9 @@ function detectOS() {
 }
 
 exports.main = function() {
-
-  var url = data.url('index.html');
-  var widget = new Widget({
+  let url = data.url('index.html');
+  
+  Widget({
     id: 'mozaic',
     label: 'Mozaic',
     contentURL: data.url('img/icon.png'),
@@ -34,7 +34,7 @@ exports.main = function() {
     }
   });
   
-  var pageMod = PageMod({
+  PageMod({
     include: [url],
     contentScriptWhen: 'end',
     contentScriptFile: [data.url('jquery.min.js'),
