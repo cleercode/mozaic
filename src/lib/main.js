@@ -36,9 +36,9 @@ exports.main = function(options) {
     }
   });
 
-  if (options.loadReason == "install") {
+  if (options.loadReason == 'install') {
     tbb.moveTo({
-      toolbarID: "nav-bar",
+      toolbarID: 'nav-bar',
       forceMove: true
     });
   }
