@@ -3,7 +3,7 @@ const Widget = require('widget').Widget;
 const ToolbarButton = require('toolbarbutton').ToolbarButton;
 const MenuItem = require('menuitems').Menuitem;
 const tabs = require('tabs');
-// const addontab = require('addon-page');
+const addontab = require('addon-page');
 const runtime = require('runtime');
 const data = require('self').data;
 
@@ -39,16 +39,16 @@ function open(content) {
       });
       worker.port.emit('os', detectOS());
 
-      bookmarks.get(worker);
-      worker.port.on('bookmarks', function() {
-        bookmarks.get(worker);
-      });
-      worker.port.on('tabs', function() {
-        currentTabs.get(worker);
-      });
-      worker.port.on('history', function() {
-        history.get(worker);
-      });
+      worker.port.on('bookmarks', function() { bookmarks.get(worker); });
+      worker.port.on('tabs', function() { currentTabs.get(worker); });
+      worker.port.on('history', function() { history.get(worker); });
+
+      switch(content) {
+        case 'bookmarks': bookmarks.get(worker);   break;
+        case 'tabs':      currentTabs.get(worker); break;
+        case 'history':   history.get(worker);     break;
+        default:          bookmarks.get(worker);   break;
+      }
     }
   });
 }
@@ -74,7 +74,7 @@ exports.main = function(options) {
     menuid: 'menu_viewPopup',
     label: 'Show All Tabs (Mozaic)',
     insertbefore: 'documentDirection-separator',
-    onCommand: open
+    onCommand: function() { open('tabs') }
   });
 
   MenuItem({
@@ -82,7 +82,7 @@ exports.main = function(options) {
     menuid: 'goPopup',
     label: 'Show All History (Mozaic)',
     insertbefore: 'showAllHistorySeparator',
-    onCommand: open
+    onCommand: function() { open('history') }
   });
 
   MenuItem({
@@ -90,6 +90,6 @@ exports.main = function(options) {
     menuid: 'bookmarksMenuPopup',
     label: 'Show All Bookmarks (Mozaic)',
     insertbefore: 'organizeBookmarksSeparator',
-    onCommand: open
+    onCommand: function() { open('bookmarks') }
   });
 };
