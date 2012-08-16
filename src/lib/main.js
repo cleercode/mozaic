@@ -48,10 +48,10 @@ exports.main = function(options) {
   }
 
   MenuItem({
-    id: 'mozaic-bookmarks',
-    menuid: 'bookmarksMenuPopup',
-    label: 'Show All Bookmarks (Mozaic)',
-    insertbefore: 'organizeBookmarksSeparator',
+    id: 'mozaic-tabs',
+    menuid: 'menu_viewPopup',
+    label: 'Show All Tabs (Mozaic)',
+    insertbefore: 'documentDirection-separator',
     onCommand: open
   });
 
@@ -60,6 +60,14 @@ exports.main = function(options) {
     menuid: 'goPopup',
     label: 'Show All History (Mozaic)',
     insertbefore: 'showAllHistorySeparator',
+    onCommand: open
+  });
+
+  MenuItem({
+    id: 'mozaic-bookmarks',
+    menuid: 'bookmarksMenuPopup',
+    label: 'Show All Bookmarks (Mozaic)',
+    insertbefore: 'organizeBookmarksSeparator',
     onCommand: open
   });
   
