@@ -56,7 +56,7 @@ function open(content) {
 exports.main = function(options) {
 
   let tbb = ToolbarButton({
-    id: 'mozaic',
+    id: 'mozaic-tbb',
     label: 'Mozaic',
     image: data.url('img/icon.png'),
     onCommand: open
