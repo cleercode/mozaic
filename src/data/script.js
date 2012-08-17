@@ -185,7 +185,7 @@ function contentToggle() {
 
 function bindItems() {
   // stickyScroll();
-  keyboardControl();
+  // keyboardControl();
   hoverInfo();
   editInfo();
 }
