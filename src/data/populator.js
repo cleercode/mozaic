@@ -1,7 +1,7 @@
 function renderGroup(group) {
   var html = '<div class="group" id="' + group.id + '"><div class="name"><h1>' + group.title + '</h1></div><ul class="items"></ul></div>';
   var el = $(html);
-  $('.groups').append(el);
+  $('#groups').append(el);
 }
 
 function renderItem(item) {

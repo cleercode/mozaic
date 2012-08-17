@@ -1,12 +1,15 @@
 function stickyScroll() {
-  var groups = $('.group h1');
+  var groups = document.querySelectorAll('.group h1');
   var offset = 70;
   var padding = 10;
-  $('.groups').scroll(function() {
-    groups.each(function(index, el) {
-      var container = $(el).parent()[0];
+  document.getElementById('groups').addEventListener('scroll', reposition);
+  reposition();
+
+  function reposition() {
+    for (var i = 0; i < groups.length; i++) {
+      var el = groups[i];
       var elRect = el.getBoundingClientRect();
-      var containerRect = container.getBoundingClientRect();
+      var containerRect = el.parentNode.getBoundingClientRect();
 
       if (elRect.top <= offset && elRect.bottom >= (containerRect.bottom - padding)) {
         el.className = 'bottom';
@@ -17,8 +20,8 @@ function stickyScroll() {
       else {
         el.className = '';
       }
-    });
-  });
+    }
+  }
 }
 
 function keyboardControl() {
@@ -43,10 +46,10 @@ function keyboardControl() {
     next.addClass('active');
 
     var nextTop = next.offset().top;
-    var docTop = $('.groups').scrollTop() + headerHeight;
+    var docTop = $('#groups').scrollTop() + headerHeight;
 
     if (nextTop < docTop) {
-      $('.groups').scrollTop(next.offset().top - headerHeight);
+      $('#groups').scrollTop(next.offset().top - headerHeight);
     }
 
     return false;
@@ -62,9 +65,9 @@ function keyboardControl() {
     next.addClass('active');
 
     var nextTop = next.offset().top;
-    var docBottom = $('.groups').scrollTop() + $(window).height();
+    var docBottom = $('#groups').scrollTop() + $(window).height();
     if (nextTop > docBottom) {
-      $('.groups').scrollTop(next.offset().top - $(window).height() + headerHeight);
+      $('#groups').scrollTop(next.offset().top - $(window).height() + headerHeight);
     }
 
     return false;
@@ -96,7 +99,7 @@ function viewToggle() {
 }
 
 function hoverInfo() {
-  $('.groups li').hover(function() {
+  $('#groups li').hover(function() {
     var infoEl = $('#info');
     if (infoEl.hasClass('editing')) return;
 
@@ -143,7 +146,7 @@ function editInfo() {
 }
 
 function clearContent() {
-  $('.groups').empty();
+  $('#groups').empty();
 }
 
 function contentToggle() {
