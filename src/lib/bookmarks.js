@@ -4,6 +4,12 @@ const {Cu} = require('chrome');
 Cu.import('resource://gre/modules/Services.jsm', this);
 Cu.import('resource:///modules/PageThumbs.jsm', this);
 
+exports.Bookmarks = {
+  name: 'Bookmarks',
+  id: 'bookmarks',
+  get: get
+}
+
 let counter = 0;
 
 function queryFolder(folder, worker) {
@@ -52,7 +58,7 @@ function queryFolder(folder, worker) {
   });
 }
 
-exports.get = function(worker) {
+function get(worker) {
   queryFolder({ id: places.bookmarks.menu,    title: 'Bookmarks Menu'    }, worker);
   queryFolder({ id: places.bookmarks.toolbar, title: 'Bookmarks Toolbar' }, worker);
   queryFolder({ id: places.bookmarks.unfiled, title: 'Unsorted Bookmarks' }, worker);

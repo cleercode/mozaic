@@ -2,7 +2,13 @@ const {Cu} = require('chrome');
 Cu.import('resource://gre/modules/Services.jsm', this);
 Cu.import('resource:///modules/PageThumbs.jsm', this);
 
-exports.get = function(worker) {
+exports.Tabs = {
+  name: 'Tabs',
+  id: 'tabs',
+  get: get
+}
+
+function get(worker) {
   let TabView = Services.wm.getMostRecentWindow('navigator:browser').TabView;
   TabView._initFrame(function() {
     let tabViewWindow = TabView.getContentWindow();

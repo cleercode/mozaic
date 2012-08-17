@@ -4,6 +4,12 @@ const {Cu} = require('chrome');
 Cu.import('resource://gre/modules/Services.jsm', this);
 Cu.import('resource:///modules/PageThumbs.jsm', this);
 
+exports.History = {
+  name: 'History',
+  id: 'history',
+  get: get
+}
+
 function queryFolder(folder, worker) {
   worker.port.emit('group', folder);
   let pages = [];
@@ -42,7 +48,7 @@ function queryFolder(folder, worker) {
   });
 }
 
-exports.get = function(worker) {
+function get(worker) {
   let today = moment().startOf('day').toDate();
   let yesterday = moment().startOf('day').subtract('days', 1).toDate();
   let yesterdayEnd = moment().endOf('day').subtract('days', 1).toDate();

@@ -6,10 +6,7 @@ const tabs = require('tabs');
 const addontab = require('addon-page');
 const runtime = require('runtime');
 const data = require('self').data;
-
-const bookmarks = require('bookmarks');
-const currentTabs = require('current-tabs');
-const history = require('history');
+const Content = require('content').Content;
 
 let url = data.url('index.html');
 
@@ -39,15 +36,18 @@ function open(content) {
       });
       worker.port.emit('os', detectOS());
 
-      worker.port.on('bookmarks', function() { bookmarks.get(worker); });
-      worker.port.on('tabs', function() { currentTabs.get(worker); });
-      worker.port.on('history', function() { history.get(worker); });
+      let contentActivated = false;
+      Object.keys(Content).forEach(function(name) {
+        let module = Content[name];
+        worker.port.on(module.id, function() { module.get(worker)});
+        if (module.id == content) { 
+          module.get(worker);
+          contentActivated = true;
+        }
+      });
 
-      switch(content) {
-        case 'bookmarks': bookmarks.get(worker);   break;
-        case 'tabs':      currentTabs.get(worker); break;
-        case 'history':   history.get(worker);     break;
-        default:          bookmarks.get(worker);   break;
+      if (!contentActivated) {
+        Content.default.get(worker);
       }
     }
   });
