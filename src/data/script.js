@@ -8,17 +8,16 @@ function stickyScroll() {
       var container = $(el).parent()[0];
       var elRect = el.getBoundingClientRect();
       var containerRect = container.getBoundingClientRect();
-      var className = '';
 
-      if (elRect.top <= offset) {
-        if (elRect.bottom >= (containerRect.bottom - padding)) {
-          className = 'bottom';
-        }
-        else if (elRect.top > containerRect.top) {
-          className = 'sticky';
-        }
+      if (elRect.top <= offset && elRect.bottom >= (containerRect.bottom - padding)) {
+        el.className = 'bottom';
       }
-      el.className = className;
+      else if ((elRect.top <= offset && elRect.top > containerRect.top) || el.className == 'bottom') {
+        el.className = 'sticky';
+      }
+      else {
+        el.className = '';
+      }
     });
   });
 }
@@ -173,7 +172,7 @@ function contentToggle() {
 }
 
 function bindItems() {
-  // stickyScroll();
+  stickyScroll();
   // keyboardControl();
   hoverInfo();
   editInfo();
