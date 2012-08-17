@@ -1,35 +1,24 @@
 function stickyScroll() {
-  $('.group h1').each(function(index, el) {
-    var $el = $(el);
-    var elOffset = $el.offset().top - $('.groups').scrollTop();
-    var elHeight = $el.height();
+  var groups = $('.group h1');
+  var offset = 70;
+  var padding = 10;
+  var height = window.innerHeight;
+  $('.groups').scroll(function() {
+    groups.each(function(index, el) {
+      var container = $(el).parent()[0];
+      var elRect = el.getBoundingClientRect();
+      var containerRect = container.getBoundingClientRect();
+      var className = '';
 
-    // Container must have position: relative;
-    var $container = $($el.parent());
-    var containerOffset = $container.offset().top; - $('.groups').scrollTop()
-    var containerHeight = $container.height();
-
-    var padding = 10;
-    var pageOffset = 60;
-
-    $('.groups').scroll(function() {
-
-      var top = $('.groups').scrollTop();
-      var position = top + pageOffset + padding;
-
-      $el.removeClass();
-
-      // Below container
-      if (position > (containerOffset + containerHeight - elHeight)) {
-        $el.addClass('bottom');
+      if (elRect.top <= offset) {
+        if (elRect.bottom >= (containerRect.bottom - padding)) {
+          className = 'bottom';
+        }
+        else if (elRect.top > containerRect.top) {
+          className = 'sticky';
+        }
       }
-      // Within container
-      else if (position >= elOffset) {
-        $el.addClass('sticky');
-      }
-      // Before container
-      else if (position < elOffset) {
-      }
+      el.className = className;
     });
   });
 }
