@@ -2,7 +2,6 @@ function stickyScroll() {
   var groups = $('.group h1');
   var offset = 70;
   var padding = 10;
-  var height = window.innerHeight;
   $('.groups').scroll(function() {
     groups.each(function(index, el) {
       var container = $(el).parent()[0];
