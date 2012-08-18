@@ -15,7 +15,8 @@ function queryFolder(folder, worker) {
   let pages = [];
   places.history.search({
     visited: {
-      begin: folder.begin
+      begin: folder.begin,
+      end: folder.end
     },
     onResult: function(result) {
       if (result.type == 'page' && result.location.indexOf('javascript') != 0) {
