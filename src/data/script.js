@@ -45,10 +45,10 @@ function keyboardControl() {
     active.removeClass('active');
     next.addClass('active');
 
+    var nextRect = next[0].getBoundingClientRect();
     var nextTop = next.offset().top;
-    var docTop = $('#groups').scrollTop() + headerHeight;
 
-    if (nextTop < docTop) {
+    if (nextRect.top < 0) {
       $('#groups').scrollTop(next.offset().top - headerHeight);
     }
 
@@ -64,9 +64,10 @@ function keyboardControl() {
     active.removeClass('active');
     next.addClass('active');
 
+    var nextRect = next[0].getBoundingClientRect();
     var nextTop = next.offset().top;
-    var docBottom = $('#groups').scrollTop() + $(window).height();
-    if (nextTop > docBottom) {
+
+    if (nextRect.bottom > $(window).height()) {
       $('#groups').scrollTop(next.offset().top - $(window).height() + headerHeight);
     }
 
@@ -90,6 +91,7 @@ function infoToggle() {
 }
 
 function viewToggle() {
+  var views = ['grid', 'list'];
   $('#list').click(function() {
     $('body').removeClass('grid').addClass('list');
   });
@@ -169,7 +171,7 @@ function contentToggle() {
 
 function bindItems() {
   stickyScroll();
-  // keyboardControl();
+  keyboardControl();
   hoverInfo();
   editInfo();
 }
