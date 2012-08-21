@@ -49,7 +49,7 @@ function keyboardControl() {
     var nextTop = next.offset().top;
 
     if (nextRect.top < 0) {
-      $('#groups').scrollTop(next.offset().top - headerHeight);
+      next[0].scrollIntoView(true);
     }
 
     return false;
@@ -68,7 +68,7 @@ function keyboardControl() {
     var nextTop = next.offset().top;
 
     if (nextRect.bottom > $(window).height()) {
-      $('#groups').scrollTop(next.offset().top - $(window).height() + headerHeight);
+      next[0].scrollIntoView(false);
     }
 
     return false;
