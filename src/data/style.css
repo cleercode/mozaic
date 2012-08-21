@@ -168,7 +168,7 @@ header .segmented button:last-child {
 
 .group .placeholder {
   font-size: 16px;
-  visibility: none;
+  visibility: hidden;
 }
 
 .group h1.sticky {
@@ -510,6 +510,10 @@ ul.items .edit .ui-icon {
     width: auto;
   }
 
+  .group .placeholder {
+    display: none;
+  }
+
   .group h1, .group h1.sticky, .group h1.bottom {
     border: 1px solid #ccc;
     border-width: 1px 0;
@@ -546,6 +550,10 @@ ul.items .edit .ui-icon {
     padding: 0;
     position: static;
     width: auto;
+  }
+
+  .info-visible .group .placeholder {
+    display: none;
   }
 
   .info-visible .group h1, .info-visible .group h1.sticky,
