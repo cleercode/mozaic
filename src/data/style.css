@@ -4,8 +4,15 @@
   padding: 0;
 }
 
+body, html {
+  width: 100%;
+  height: 100%;
+}
+
 body {
+  -moz-box-orient: vertical;
   background: #fafafa;
+  display: -moz-box;
   font: message-box;
   font-size: 14px;
   line-height: 1.5;
@@ -24,15 +31,16 @@ a {
   height: 14px;
 }
 
+#content {
+  -moz-box-flex: 1;
+  display: -moz-box;
+}
+
 /* Header */
 
 header {
   -moz-box-sizing: border-box;
-  overflow: hidden;
   padding: 11px 20px 12px;
-  position: fixed;
-  left: 0;
-  top: 0;
   min-width: 520px;
   width: 100%;
   z-index: 2;
@@ -123,34 +131,30 @@ header .segmented button:last-child {
 /* Items */
 
 #groups {
+  -moz-box-flex: 1;
+  -moz-box-orient: vertical;
   -moz-transition: right 0.5s ease-in;
   background: url("chrome://browser/skin/newtab/noise.png") #ededed;
   overflow-y: scroll;
-  position: fixed;
-  top: 60px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.info-visible #groups {
-  -moz-transition: right 0.5s ease-out;
-  right: 322px;
+  display: -moz-box;
+  width: 100%;
 }
 
 .group {
+  -moz-box-orient: horizontal;
+  display: -moz-box;
   position: relative;
-  overflow: hidden;
+}
+
+.group:last-child {
+  -moz-box-flex: 1;
 }
 
 .group .name {
   -moz-box-sizing: border-box;
   background: #fafafa;
-  float: left;
+  box-shadow: 2px 0 2px -2px rgba(0, 0, 0, 0.1), inset 1px 0 1px 1px #fff;
   padding: 10px 20px;
-  position: absolute;
-  top: 0;
-  bottom: 0;
   text-shadow: 0 1px #fff;
   width: 140px;
 }
@@ -160,6 +164,11 @@ header .segmented button:last-child {
   font-weight: normal;
   position: absolute;
   width: 100px;
+}
+
+.group .placeholder {
+  font-size: 16px;
+  visibility: none;
 }
 
 .group h1.sticky {
@@ -183,12 +192,9 @@ header .segmented button:last-child {
 }
 
 ul.items {
+  -moz-box-flex: 1;
   background: rgba(255, 255, 255, 0.2);
   border-left: 1px solid #ccc;
-  box-shadow: inset 2px 0 2px -2px rgba(0, 0, 0, 0.1), 1px 0 1px 1px #fff;
-  float: left;
-  margin-left: 140px;
-  width: -moz-calc(100% - 141px);
 }
 
 ul.items li {
@@ -252,22 +258,21 @@ ul.items .edit .ui-icon {
 /* Info Panel */
 
 #info {
-  -moz-transition: right 0.5s ease-in;
   -moz-box-sizing: border-box;
   border-left: 1px solid #aaa;
   box-shadow: inset 1px 2px 2px rgba(0, 0, 0, 0.2);
+  display: none;
   font-size: 12px;
-  padding: 67px 10px 10px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: -320px;
+  padding: 10px;
   width: 322px;
 }
 
 .info-visible #info {
-  -moz-transition: right 0.5s ease-out;
-  right: 0;
+  display: block;
+}
+
+#info > * {
+  max-width: 300px;
 }
 
 #info .thumb {
@@ -494,6 +499,7 @@ ul.items .edit .ui-icon {
 
 @media only screen and (max-width: 767px) {
   .group {
+    display: block;
     padding: 0;
   }
 
@@ -531,6 +537,7 @@ ul.items .edit .ui-icon {
 
 @media only screen and (max-width: 1068px) {
   .info-visible .group {
+    display: block;
     padding: 0;
   }
 
